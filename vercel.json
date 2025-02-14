@@ -1,0 +1,10 @@
+{
+    "buildCommand": "npm install next-auth axios && next build",
+    "installCommand": "npm install",
+    "framework": "nextjs",
+    "env": {
+        "NEXTAUTH_URL": "https://fc-frontend-xi.vercel.app/",
+        "NEXTAUTH_SECRET": "prj_md3kVPaOB0AWBFztCayuyFqRZNYn",
+        "NEXT_PUBLIC_API_URL": "https://fc-backend-cnxm.onrender.com"
+    }
+}
