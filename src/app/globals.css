@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +11,166 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
 body {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  @apply bg-white dark:bg-black text-black dark:text-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  /* Remove underline on hover */
+}
+
+.dark body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark a {
+  color: var(--foreground);
+}
+
+.dark a:hover {
+  color: var(--foreground);
+}
+
+/* Remove the sidebar and methodology-specific styles */
+.sidebar,
+.main-content {
+  /* These styles can be removed */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: 50;
+    transform: translateX(-100%);
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Blog styles */
+.dm-serif-text-regular {
+  font-family: 'DM Serif Text', serif;
+}
+
+.titillium-web-light {
+  font-weight: 300;
+}
+
+.titillium-web-extralight-italic {
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Blog content styles */
+.blog-content a {
+  @apply text-[#308e87] hover:underline;
+}
+
+.blog-content ul {
+  @apply list-disc list-inside ml-6 mb-4;
+}
+
+.blog-content h2 {
+  @apply text-2xl md:text-3xl font-bold mt-8 mb-4 dm-serif-text-regular;
+}
+
+.blog-content img {
+  @apply my-6 mx-auto max-w-full h-auto;
+}
+
+@layer base {
+
+  /* Typography improvements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+
+  /* Blog specific styles */
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose p {
+    @apply leading-relaxed text-gray-700 dark:text-gray-300;
+  }
+
+  .prose a {
+    @apply text-[#308e87] hover:text-[#308e87]/80 no-underline hover:underline transition-colors duration-200;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-[#308e87] bg-[#308e87]/5 pl-4 py-2 my-6 italic;
+  }
+
+  .prose code {
+    @apply bg-gray-100 dark:bg-gray-800 rounded px-1.5 py-0.5 text-sm font-mono;
+  }
+
+  .prose img {
+    @apply rounded-xl shadow-lg my-8 w-auto mx-auto;
+    max-height: min(360px, 70vh);
+  }
+
+  .prose ul {
+    @apply space-y-2;
+  }
+
+  .prose ul li {
+    @apply flex items-start;
+  }
+
+  .prose ul li:before {
+    @apply content-[''] block h-2 w-2 rounded-full bg-[#308e87] mt-2 mr-3 flex-shrink-0;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@layer utilities {
+  /* Remove aspect ratio utilities */
 }
