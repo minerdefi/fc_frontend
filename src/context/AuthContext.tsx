@@ -1,28 +1,71 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { authService } from '@/services/auth.service';
+
+interface User {
+    username: string;
+    email: string;
+    first_name: string;
+    last_name: string;
+}
+
+interface ProfileData {
+    username: string;
+    email: string;
+    first_name: string;
+    last_name: string;
+    phone_number: string | null;
+    balance: string;
+    earnings: string;
+    ADA: string;
+    avail_balance: string;
+    Tax_balance: string;
+    deposit: string;
+    created_at: string;
+}
 
 interface AuthContextType {
     isAuthenticated: boolean;
     checkAuth: () => boolean;
     logout: () => void;
     login: (username: string, password: string) => Promise<void>;
+    user: User | null;
+    profile: ProfileData | null;
+    refreshProfile: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [user, setUser] = useState<User | null>(null);
+    const [profile, setProfile] = useState<ProfileData | null>(null);
     const router = useRouter();
+    const pathname = usePathname();
 
-    const login = async (username: string, password: string) => {
+    const checkAuth = () => {
+        const token = authService.getAccessToken();
+        const isValid = !!token;
+        setIsAuthenticated(isValid);
+        return isValid;
+    };
+
+    useEffect(() => {
+        checkAuth();
+    }, [pathname]);
+
+    const login = async (login: string, password: string) => {
         try {
-            const response = await authService.login({ username, password });
+            const response = await authService.login({ login, password });
             if (response.status === 'success') {
                 setIsAuthenticated(true);
-                router.push('/dashboard');
+                setUser(response.data.user);
+                // Use window.location.href for hard navigation
+                window.location.href = '/dashboard';
+            } else {
+                throw new Error(response.message || 'Login failed');
             }
         } catch (error) {
             throw error;
@@ -32,21 +75,68 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const logout = () => {
         authService.clearTokens();
         setIsAuthenticated(false);
-        router.push('/login');
+        setUser(null);
+        setProfile(null);
+        // Use window.location.href for hard navigation
+        window.location.href = '/login';
     };
 
-    const checkAuth = () => {
-        const isValid = authService.isAuthenticated();
-        setIsAuthenticated(isValid);
-        return isValid;
+    const fetchProfile = async () => {
+        try {
+            if (!authService.getAccessToken()) {
+                setIsAuthenticated(false);
+                setProfile(null);
+                return;
+            }
+
+            const response = await authService.getProfile();
+            if (response?.status === 'success') {
+                setProfile(response.data);
+                setIsAuthenticated(true);
+            } else {
+                setIsAuthenticated(false);
+                setProfile(null);
+            }
+        } catch (error) {
+            console.error('Error fetching profile:', error);
+            setIsAuthenticated(false);
+            setProfile(null);
+
+            // Redirect to login if unauthorized
+            if (error instanceof Error && error.message.includes('401')) {
+                window.location.href = '/login';
+            }
+        }
+    };
+
+    const refreshProfile = async () => {
+        try {
+            const token = authService.getAccessToken();
+            if (!token) return;
+
+            const response = await fetch('http://127.0.0.1:8000/auth/profile/', {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.status === 'success') {
+                    setProfile(data.data);
+                }
+            }
+        } catch (error) {
+            console.error('Error refreshing profile:', error);
+        }
     };
 
     useEffect(() => {
-        checkAuth();
+        fetchProfile();
     }, []);
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, checkAuth, logout, login }}>
+        <AuthContext.Provider value={{ isAuthenticated, checkAuth, logout, login, user, profile, refreshProfile }}>
             {children}
         </AuthContext.Provider>
     );

@@ -2,31 +2,19 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-    const { pathname } = request.nextUrl;
+    // Add auth token to all API requests
+    const authToken = request.cookies.get('auth-token')?.value;
 
-    // Check for access token in cookies
-    const accessToken = request.cookies.get('accessToken')?.value;
-    const isAuthenticated = !!accessToken;
+    if (authToken && request.nextUrl.pathname.startsWith('/api/')) {
+        const requestHeaders = new Headers(request.headers);
+        requestHeaders.set('Authorization', `Bearer ${authToken}`);
 
-    // Protect dashboard routes
-    if (pathname.startsWith('/dashboard')) {
-        if (!isAuthenticated) {
-            return NextResponse.redirect(new URL('/login', request.url));
-        }
-    }
-
-    // Prevent authenticated users from accessing auth pages
-    if (['/login', '/register'].includes(pathname) && isAuthenticated) {
-        return NextResponse.redirect(new URL('/dashboard', request.url));
+        return NextResponse.next({
+            request: {
+                headers: requestHeaders,
+            },
+        });
     }
 
     return NextResponse.next();
 }
-
-export const config = {
-    matcher: [
-        '/dashboard/:path*',
-        '/login',
-        '/register',
-    ],
-};

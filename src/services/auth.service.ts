@@ -1,8 +1,9 @@
 import { RegisterData, AuthResponse } from '@/types/auth';
 
-const API_URL = 'http://127.0.0.1:8000/auth';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+const API_URL = `${BASE_URL}/auth`;
 
-export const authService = {
+class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {
         try {
             const response = await fetch(`${API_URL}/register/`, {
@@ -24,7 +25,6 @@ export const authService = {
 
             if (!response.ok) {
                 if (responseData.errors) {
-                    // Handle validation errors
                     const errorMessage = Object.entries(responseData.errors)
                         .map(([key, value]) => `${key}: ${value}`)
                         .join(', ');
@@ -33,37 +33,37 @@ export const authService = {
                 throw new Error(responseData.message || 'Registration failed');
             }
 
+            // Don't store tokens after registration since email needs verification
             return responseData;
         } catch (error) {
             console.error('Registration error:', error);
             throw error;
         }
-    },
+    }
 
     storeTokens(tokens: { refresh: string; access: string }) {
-        // Store in localStorage for easy access
         localStorage.setItem('accessToken', tokens.access);
         localStorage.setItem('refreshToken', tokens.refresh);
-
-        // Store in cookies for middleware
-        document.cookie = `accessToken=${tokens.access}; path=/`;
-        document.cookie = `refreshToken=${tokens.refresh}; path=/`;
-    },
+    }
 
     clearTokens() {
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-        document.cookie = 'accessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
-        document.cookie = 'refreshToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
-    },
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            document.cookie = 'accessToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+        }
+    }
 
     getAccessToken(): string | null {
-        return localStorage.getItem('accessToken');
-    },
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('accessToken');
+        }
+        return null;
+    }
 
     isAuthenticated(): boolean {
         return !!this.getAccessToken();
-    },
+    }
 
     async verifyEmail(token: string): Promise<void> {
         try {
@@ -85,9 +85,9 @@ export const authService = {
             console.error('Email verification error:', error);
             throw error;
         }
-    },
+    }
 
-    async login(credentials: { username: string; password: string }): Promise<AuthResponse> {
+    async login(credentials: { login: string; password: string }): Promise<AuthResponse> {
         try {
             const response = await fetch(`${API_URL}/login/`, {
                 method: 'POST',
@@ -111,5 +111,55 @@ export const authService = {
             console.error('Login error:', error);
             throw error;
         }
-    },
-};
+    }
+
+    async getProfile() {
+        try {
+            const token = this.getAccessToken();
+            if (!token) {
+                console.error('No access token found');
+                return null;
+            }
+
+            const response = await fetch('http://127.0.0.1:8000/auth/profile/', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                credentials: 'include'
+            });
+
+            if (response.status === 401) {
+                // Clear tokens and trigger re-login
+                this.clearTokens();
+                window.location.href = '/login';
+                return null;
+            }
+
+            if (!response.ok) {
+                throw new Error(`Profile fetch failed: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Profile fetch error:', error);
+            throw error;
+        }
+    }
+
+    setTokens(tokens: { access: string; refresh: string }) {
+        localStorage.setItem('accessToken', tokens.access);
+        localStorage.setItem('refreshToken', tokens.refresh);
+    }
+
+    logout() {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        window.location.href = '/login';
+    }
+}
+
+export const authService = new AuthService();

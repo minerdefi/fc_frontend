@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function MethodologySection() {
     const advisors = [
@@ -77,9 +78,11 @@ export default function MethodologySection() {
                                 viewport={{ once: true }}
                                 className="flex items-start space-x-4 mb-6"
                             >
-                                <img
+                                <Image
                                     src={`/images/${advisor.image}`}
                                     alt={advisor.name}
+                                    width={48}
+                                    height={48}
                                     className="w-12 h-12 rounded-full object-cover"
                                 />
                                 <div>

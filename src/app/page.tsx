@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "./components/PageLayout";
+import Link from "next/link";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -48,13 +49,15 @@ export default function Home() {
             <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:leading-snug lg:leading-snug mb-6">
               Crypto will create the largest one-time shift in wealth in the history of the internet
             </h1>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition-all"
-            >
-              Learn More
-            </motion.button>
+            <div className="flex flex-col items-center mt-8">
+              <Link
+                href="/register"
+                className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
+              >
+                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                <span className="relative">Get Started</span>
+              </Link>
+            </div>
           </div>
         </motion.div>
       </section>

@@ -78,7 +78,10 @@ const RegisterPage = () => {
                 });
 
                 if (response.status === 'success') {
-                    router.push('/login?registered=true');
+                    // Preserve theme when navigating
+                    const currentTheme = theme;
+                    localStorage.setItem('forbes-capital-theme', currentTheme || 'system');
+                    window.location.href = '/login?registered=true';
                 }
             } catch (error: any) {
                 setApiError(error.message || 'Registration failed');
@@ -367,9 +370,16 @@ const RegisterPage = () => {
 
                                             <p className="text-center text-sm text-gray-600 dark:text-gray-400">
                                                 Already have an account?{' '}
-                                                <Link href="/login" className="text-[#308e87] hover:text-[#308e87]/80 font-medium">
+                                                <button
+                                                    onClick={() => {
+                                                        const currentTheme = theme;
+                                                        localStorage.setItem('forbes-capital-theme', currentTheme || 'system');
+                                                        window.location.href = '/login';
+                                                    }}
+                                                    className="text-[#308e87] hover:text-[#308e87]/80 font-medium"
+                                                >
                                                     Sign in
-                                                </Link>
+                                                </button>
                                             </p>
                                         </div>
                                     </form>
