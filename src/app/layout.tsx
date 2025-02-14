@@ -1,36 +1,43 @@
+'use client';
+
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer";  // Make sure this points to your original Footer component
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { AuthProvider } from '@/context/AuthContext';
-
-export const metadata = {
-  title: "Forbes Capital",
-  description: "grow your investment wealth...",
-  icons: {
-    icon: "/images/fc1.png",
-    shortcut: "/images/fc1.png",
-    apple: "/images/fc1.png",
-    other: {
-      rel: "apple-touch-icon",
-      url: "/images/fc1.png",
-    },
-  },
-};
+import { ThemeProvider } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import Loader from '@/components/common/Loader';
+import { Suspense } from 'react';
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const pathname = usePathname();
+  const isDashboardPage = pathname?.startsWith('/dashboard');
+
   return (
-    <html lang="en" className="light">
-      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-black pt-[4rem]">
-        <AuthProvider>
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </AuthProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-black">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="forbes-capital-theme"
+        >
+          <AuthProvider>
+            {!isDashboardPage && <Navbar />}
+            <main className={`flex-grow ${!isDashboardPage ? 'pt-16' : ''}`}>
+              <Suspense fallback={<Loader fullScreen text="Loading..." />}>
+                {children}
+              </Suspense>
+            </main>
+            {!isDashboardPage && <Footer />}
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

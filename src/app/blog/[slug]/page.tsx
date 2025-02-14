@@ -2,8 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from "react";
 import Disclosure from './components/Disclosure';
 
 export default function BlogPostPage() {
@@ -48,7 +47,7 @@ export default function BlogPostPage() {
 
                 {/* Content */}
                 <div className="max-w-7xl mx-auto lg:text-xl titillium-web-light">
-                    // ...blog content sections...
+                    {/* Your comment here */}
                 </div>
 
                 {/* Disclosure */}

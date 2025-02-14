@@ -1,11 +1,11 @@
 'use client';
 
-import { useAuth } from '@/context/AuthContext';
-import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import DashboardSidebar from '@/components/dashboard/DashboardSidebar';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
-export default function DashboardLayout({
+export default function DashboardPageLayout({
     children,
 }: {
     children: React.ReactNode;
@@ -14,21 +14,12 @@ export default function DashboardLayout({
     const router = useRouter();
 
     useEffect(() => {
-        if (!checkAuth()) {
-            router.push('/login');
-        }
-    }, []);
+        checkAuth();
+    }, [checkAuth, router]); // Add missing dependencies
 
     if (!isAuthenticated) {
-        return null; // or a loading spinner
+        return null;
     }
 
-    return (
-        <div className="flex h-screen bg-gray-100 dark:bg-gray-900">
-            <DashboardSidebar />
-            <main className="flex-1 overflow-y-auto p-8">
-                {children}
-            </main>
-        </div>
-    );
+    return <DashboardLayout>{children}</DashboardLayout>;
 }

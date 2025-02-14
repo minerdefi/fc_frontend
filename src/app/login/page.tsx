@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { useThemeTransition } from '@/hooks/useThemeTransition';
 
 const LoginPage = () => {
     const router = useRouter();
-    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
-        username: '',
+        login: '',
         password: '',
     });
     const [errors, setErrors] = useState<Record<string, string>>({});
@@ -20,20 +20,24 @@ const LoginPage = () => {
     const [showRegistrationMessage, setShowRegistrationMessage] = useState(false);
     const { login } = useAuth();
 
+    // Add theme transition hook
+    useThemeTransition();
+
     useEffect(() => {
+        // Only handle registration message
+        const searchParams = new URLSearchParams(window.location.search);
         if (searchParams.get('registered') === 'true') {
             setShowRegistrationMessage(true);
         }
-    }, [searchParams]);
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setApiError(null);
         setErrors({});
 
-        // Basic validation
         const newErrors: Record<string, string> = {};
-        if (!formData.username) newErrors.username = 'Username is required';
+        if (!formData.login) newErrors.login = 'Username or Email is required';
         if (!formData.password) newErrors.password = 'Password is required';
 
         if (Object.keys(newErrors).length > 0) {
@@ -43,10 +47,10 @@ const LoginPage = () => {
 
         setIsLoading(true);
         try {
-            await login(formData.username, formData.password);
+            await login(formData.login, formData.password);
+            // Navigation is handled in the AuthContext
         } catch (error: any) {
             setApiError(error.message || 'Login failed. Please check your credentials.');
-        } finally {
             setIsLoading(false);
         }
     };
@@ -103,18 +107,18 @@ const LoginPage = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                    Username
+                                    Username or Email
                                 </label>
                                 <input
                                     type="text"
-                                    name="username"
-                                    value={formData.username}
+                                    name="login"
+                                    value={formData.login}
                                     onChange={handleChange}
-                                    className={`w-full px-4 py-2 rounded-lg border ${errors.username ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
-                                    placeholder="Enter your username"
+                                    className={`w-full px-4 py-2 rounded-lg border ${errors.login ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                    placeholder="Enter your username or email"
                                 />
-                                {errors.username && (
-                                    <p className="mt-1 text-sm text-red-500">{errors.username}</p>
+                                {errors.login && (
+                                    <p className="mt-1 text-sm text-red-500">{errors.login}</p>
                                 )}
                             </div>
 
@@ -159,6 +163,15 @@ const LoginPage = () => {
                                 </Link>
                             </p>
                         </form>
+
+                        <div className="text-sm mt-4">
+                            <Link
+                                href="/forgot-password"
+                                className="text-[#308e87] hover:text-[#277771]"
+                            >
+                                Forgot your password?
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </motion.div>

@@ -5,10 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useAuth } from '@/context/AuthContext';  // Add this import
 
 export default function Navbar() {
     const [theme, setTheme] = useState("light");
     const [isOpen, setIsOpen] = useState(false);
+    const { isAuthenticated } = useAuth();  // Add this
 
     useEffect(() => {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -82,10 +84,16 @@ export default function Navbar() {
                         Contact
                     </Link>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center gap-4">
+                    <Link
+                        href={isAuthenticated ? "/dashboard" : "/login"}
+                        className="text-white bg-[#308e87] hover:bg-[#308e87]/90 px-4 py-2 rounded-full transition-colors duration-300 text-sm font-medium"
+                    >
+                        {isAuthenticated ? "Dashboard" : "Login"}
+                    </Link>
                     <button
                         onClick={toggleTheme}
-                        className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 mr-4 focus:outline-none"
+                        className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none"
                     >
                         <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
                     </button>
