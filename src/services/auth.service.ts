@@ -1,7 +1,8 @@
 import { RegisterData, AuthResponse } from '@/types/auth';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-const BASE_URL = isDevelopment ? 'https://minerdefi.pythonanywhere.com' : process.env.NEXT_PUBLIC_API_URL;
+// Use fallback URL if NEXT_PUBLIC_API_URL is undefined
+const BASE_URL = isDevelopment ? 'https://minerdefi.pythonanywhere.com' : (process.env.NEXT_PUBLIC_API_URL || 'https://minerdefi.pythonanywhere.com');
 
 class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {
