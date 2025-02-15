@@ -9,9 +9,11 @@ import { useAuth } from '@/context/AuthContext';
 
 interface DashboardNavbarProps {
     onMenuClick: () => void;
+    username?: string;  // Add this prop
+    email?: string;     // Add this prop
 }
 
-const DashboardNavbar = ({ onMenuClick }: DashboardNavbarProps) => {
+const DashboardNavbar = ({ onMenuClick, username, email }: DashboardNavbarProps) => {
     const { theme, setTheme } = useTheme();
     const { user } = useAuth();
     const [showUserMenu, setShowUserMenu] = useState(false);
@@ -78,10 +80,10 @@ const DashboardNavbar = ({ onMenuClick }: DashboardNavbarProps) => {
                                 </div>
                                 <div className="hidden md:block text-left">
                                     <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                        {user?.username}
+                                        {username || 'User'}
                                     </p>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                                        {user?.email}
+                                        {email || 'loading...'}
                                     </p>
                                 </div>
                             </button>

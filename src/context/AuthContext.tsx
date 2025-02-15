@@ -23,7 +23,11 @@ interface ProfileData {
     avail_balance: string;
     Tax_balance: string;
     deposit: string;
+    total_deposits: string;    // Add this line
+    total_withdrawals: string; // Add this line
     created_at: string;
+    transaction_pin: string | null; // Add this line
+    has_transaction_pin: boolean;   // Add this line
 }
 
 interface AuthContextType {
@@ -58,16 +62,24 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const login = async (login: string, password: string) => {
         try {
+            console.log('AuthContext: Starting login process');
             const response = await authService.login({ login, password });
+            console.log('AuthContext: Login response:', response);
+
             if (response.status === 'success') {
                 setIsAuthenticated(true);
                 setUser(response.data.user);
-                // Use window.location.href for hard navigation
-                window.location.href = '/dashboard';
+                await fetchProfile(); // Fetch profile before redirect
+                console.log('AuthContext: Login successful, redirecting...');
+                router.push('/dashboard');
+                return response;
             } else {
                 throw new Error(response.message || 'Login failed');
             }
         } catch (error) {
+            console.error('AuthContext: Login error:', error);
+            setIsAuthenticated(false);
+            setUser(null);
             throw error;
         }
     };
