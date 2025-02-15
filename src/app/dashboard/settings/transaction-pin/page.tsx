@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { authService } from '@/services/auth.service';
+import { authService } from '../../../../services/auth.service';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '../../../../context/AuthContext';
 
 export default function TransactionPinPage() {
     const router = useRouter();

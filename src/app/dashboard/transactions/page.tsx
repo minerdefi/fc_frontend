@@ -12,8 +12,8 @@ import {
     faChevronLeft,
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { useAuth } from '@/context/AuthContext';
-import { authService } from '@/services/auth.service';
+import { useAuth } from '../../../context/AuthContext';
+import { authService } from '../../../services/auth.service';
 
 interface Transaction {
     transaction_type: string;
