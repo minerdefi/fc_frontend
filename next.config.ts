@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: 'https://fc-backend-cnxm.onrender.com' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://minerdefi.pythonanywhere.com' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
           { key: 'Access-Control-Allow-Headers', value: 'Accept, Accept-Version, Content-Length, Content-Type, Date' },
         ]
