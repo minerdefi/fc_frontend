@@ -41,7 +41,7 @@ export default function DashboardPage() {
     useEffect(() => {
         const fetchEarningsHistory = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/auth/earnings-history/', {
+                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/earnings-history/', {
                     headers: {
                         'Authorization': `Bearer ${authService.getAccessToken()}`,
                     }
@@ -63,7 +63,7 @@ export default function DashboardPage() {
     useEffect(() => {
         const fetchRecentActivity = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/auth/recent-activity/', {
+                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/recent-activity/', {
                     headers: {
                         'Authorization': `Bearer ${authService.getAccessToken()}`,
                     }

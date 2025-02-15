@@ -16,7 +16,7 @@ export default function SettingsPage() {
 
         const formData = new FormData(e.currentTarget);
         try {
-            const response = await fetch('http://127.0.0.1:8000/auth/profile/update/', {
+            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/profile/update/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

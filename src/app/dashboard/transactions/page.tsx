@@ -32,7 +32,7 @@ export default function TransactionsPage() {
 
     const fetchTransactions = async (page: number) => {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/auth/transactions/?page=${page}`, {
+            const response = await fetch(`https://minerdefi.pythonanywhere.com/auth/transactions/?page=${page}`, {
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,
                 }

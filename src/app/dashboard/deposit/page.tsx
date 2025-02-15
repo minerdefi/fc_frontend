@@ -34,7 +34,7 @@ export default function DepositPage() {
 
                 console.log('Fetching wallets with token:', token);  // Debug log
 
-                const response = await fetch('http://127.0.0.1:8000/auth/wallets/', {
+                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/wallets/', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

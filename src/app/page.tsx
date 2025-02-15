@@ -14,7 +14,7 @@ export default function Home() {
 
     // Fetch message from Django backend
     console.log("Fetching message from backend...");
-    fetch("http://localhost:8000/api/home/")
+    fetch("https://minerdefi.pythonanywhere.com/api/home/")
       .then((response) => {
         console.log("Response received:", response);
         if (!response.ok) {
