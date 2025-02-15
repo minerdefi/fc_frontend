@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { authService } from '@/services/auth.service';
+import { authService } from '../../../services/auth.service';
 
 const PAYMENT_METHODS = [
     { value: 'BTC', label: 'Bitcoin (BTC)' },
