@@ -11,9 +11,9 @@ import {
     faCoins,
     faExchangeAlt
 } from '@fortawesome/free-solid-svg-icons';
-import { useAuth } from '@/context/AuthContext';
-import AssetDistributionChart from '@/components/dashboard/AssetDistributionChart';
-import PortfolioPerformanceChart from '@/components/dashboard/PortfolioPerformanceChart';
+import { useAuth } from '../../context/AuthContext';
+import AssetDistributionChart from '../../components/dashboard/AssetDistributionChart';
+import PortfolioPerformanceChart from '../../components/dashboard/PortfolioPerformanceChart';
 import { authService } from '@/services/auth.service';
 
 export default function DashboardPage() {
