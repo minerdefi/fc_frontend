@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faSearch, faSun, faMoon, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 interface DashboardNavbarProps {
     onMenuClick: () => void;

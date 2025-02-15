@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { authService } from '@/services/auth.service';
-import Loader from '@/components/common/Loader';
+import { authService } from '../../../services/auth.service';
+import Loader from '../../common/Loader';
 
 interface DepositFormProps {
     selectedCrypto: string;
