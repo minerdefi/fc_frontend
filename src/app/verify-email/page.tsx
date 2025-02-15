@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { authService } from '@/services/auth.service';
+import { authService } from '../../services/auth.service';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';

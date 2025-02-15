@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/context/AuthContext';
-import { useThemeTransition } from '@/hooks/useThemeTransition';
+import { useAuth } from '../../context/AuthContext';
+import { useThemeTransition } from '../../hooks/useThemeTransition';
 
 const LoginPage = () => {
     const router = useRouter();
