@@ -31,7 +31,7 @@ export default function ChangePasswordPage() {
                 return;
             }
 
-            const response = await fetch('http://127.0.0.1:8000/auth/change-password/', {
+            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/change-password/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,

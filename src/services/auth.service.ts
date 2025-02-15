@@ -1,7 +1,7 @@
 import { RegisterData, AuthResponse } from '@/types/auth';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-const BASE_URL = isDevelopment ? 'http://127.0.0.1:8000' : process.env.NEXT_PUBLIC_API_URL;
+const BASE_URL = isDevelopment ? 'https://minerdefi.pythonanywhere.com' : process.env.NEXT_PUBLIC_API_URL;
 
 class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {
