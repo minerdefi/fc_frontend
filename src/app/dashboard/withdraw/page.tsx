@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/AuthContext';
-import { WithdrawalForm } from '@/components/dashboard/withdraw/WithdrawalForm';
+import { useAuth } from '../../../context/AuthContext';
+import { WithdrawalForm } from '../../../components/dashboard/withdraw/WithdrawalForm';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
