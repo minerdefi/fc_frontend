@@ -14,7 +14,7 @@ import {
 import { useAuth } from '../../context/AuthContext';
 import AssetDistributionChart from '../../components/dashboard/AssetDistributionChart';
 import PortfolioPerformanceChart from '../../components/dashboard/PortfolioPerformanceChart';
-import { authService } from '@/services/auth.service';
+import { authService } from '../../services/auth.service';
 
 export default function DashboardPage() {
     const { profile } = useAuth();

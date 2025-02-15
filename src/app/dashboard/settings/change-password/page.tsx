@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { authService } from '@/services/auth.service';
+import { authService } from '../../../../services/auth.service';
 import { useRouter } from 'next/navigation';
 
 export default function ChangePasswordPage() {
