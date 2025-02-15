@@ -1,12 +1,12 @@
 import { RegisterData, AuthResponse } from '@/types/auth';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
-const API_URL = `${BASE_URL}/auth`;
+const isDevelopment = process.env.NODE_ENV === 'development';
+const BASE_URL = isDevelopment ? 'http://127.0.0.1:8000' : process.env.NEXT_PUBLIC_API_URL;
 
 class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {
         try {
-            const response = await fetch(`${API_URL}/register/`, {
+            const response = await fetch(`${BASE_URL}/auth/register/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ class AuthService {
 
     async verifyEmail(token: string): Promise<void> {
         try {
-            const response = await fetch(`${API_URL}/verify-email/?token=${token}`, {
+            const response = await fetch(`${BASE_URL}/auth/verify-email/?token=${token}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
@@ -87,28 +87,38 @@ class AuthService {
         }
     }
 
-    async login(credentials: { login: string; password: string }): Promise<AuthResponse> {
+    async login(credentials: { login: string; password: string }) {
         try {
-            const response = await fetch(`${API_URL}/login/`, {
+            console.log('AuthService: Starting login request to:', `${BASE_URL}/auth/login/`);
+            const response = await fetch(`${BASE_URL}/auth/login/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(credentials)
+                body: JSON.stringify(credentials),
+                credentials: 'include'
             });
 
+            console.log('AuthService: Response status:', response.status);
             const data = await response.json();
+            console.log('AuthService: Response data:', data);
 
             if (!response.ok) {
-                throw new Error(data.message || 'Login failed');
+                const errorMessage = data.message || data.detail || 'Login request failed';
+                console.error('Login error:', errorMessage);
+                throw new Error(errorMessage);
             }
 
-            // Store tokens in both localStorage and cookies
-            this.storeTokens(data.data.tokens);
+            if (data.status === 'success' && data.data?.tokens) {
+                console.log('AuthService: Storing tokens');
+                this.storeTokens(data.data.tokens);
+                return data;
+            }
 
-            return data;
+            console.error('AuthService: Invalid response format:', data);
+            throw new Error('Invalid response format');
         } catch (error) {
-            console.error('Login error:', error);
+            console.error('AuthService login error:', error);
             throw error;
         }
     }
@@ -121,7 +131,7 @@ class AuthService {
                 return null;
             }
 
-            const response = await fetch('http://127.0.0.1:8000/auth/profile/', {
+            const response = await fetch(`${BASE_URL}/auth/profile/`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
