@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -18,14 +18,11 @@
     "chart.js": "^4.4.7",
     "framer-motion": "^12.4.2",
     "next": "15.1.6",
-    "next-auth": "^4.24.5",
     "next-themes": "^0.4.4",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
-    "react-dom": "^19.0.0",
-    "tailwindcss": "^3.4.1",
-    "autoprefixer": "^10.4.13"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -36,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }
