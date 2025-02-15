@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { authService } from '@/services/auth.service';
 
@@ -23,16 +23,16 @@ interface ProfileData {
     avail_balance: string;
     Tax_balance: string;
     deposit: string;
-    total_deposits: string;    // Add this line
-    total_withdrawals: string; // Add this line
+    total_deposits: string;
+    total_withdrawals: string;
     created_at: string;
-    transaction_pin: string | null; // Add this line
-    has_transaction_pin: boolean;   // Add this line
+    transaction_pin: string | null;
+    has_transaction_pin: boolean;
 }
 
 interface AuthContextType {
     isAuthenticated: boolean;
-    checkAuth: () => boolean;
+    checkAuth: () => Promise<boolean>; // changed from () => boolean
     logout: () => void;
     login: (username: string, password: string) => Promise<void>;
     user: User | null;
@@ -42,14 +42,14 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState<User | null>(null);
     const [profile, setProfile] = useState<ProfileData | null>(null);
     const router = useRouter();
     const pathname = usePathname();
 
-    const checkAuth = () => {
+    const checkAuth = async () => {
         const token = authService.getAccessToken();
         const isValid = !!token;
         setIsAuthenticated(isValid);
