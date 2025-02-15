@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/AuthContext';
-import { CryptocurrencySelector } from '@/components/dashboard/deposit/CryptocurrencySelector';
-import { DepositForm } from '@/components/dashboard/deposit/DepositForm';
-import { WalletDisplay } from '@/components/dashboard/deposit/WalletDisplay';
-import { authService } from '@/services/auth.service';
+import { useAuth } from '../../../context/AuthContext';
+import { CryptocurrencySelector } from '../../../components/dashboard/deposit/CryptocurrencySelector';
+import { DepositForm } from '../../../components/dashboard/deposit/DepositForm';
+import { WalletDisplay } from '../../../components/dashboard/deposit/WalletDisplay';
+import { authService } from '../../../services/auth.service';
 
 interface WalletAddress {
     cryptocurrency: string;

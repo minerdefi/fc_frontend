@@ -19,16 +19,16 @@ export default function RootLayout({
   const isDashboardPage = pathname?.startsWith('/dashboard');
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-black">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="forbes-capital-theme"
-        >
-          <AuthProvider>
+    <html lang="en">
+      <body>
+        <AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            storageKey="forbes-capital-theme"
+          >
             {!isDashboardPage && <Navbar />}
             <main className={`flex-grow ${!isDashboardPage ? 'pt-16' : ''}`}>
               <Suspense fallback={<Loader fullScreen text="Loading..." />}>
@@ -36,8 +36,8 @@ export default function RootLayout({
               </Suspense>
             </main>
             {!isDashboardPage && <Footer />}
-          </AuthProvider>
-        </ThemeProvider>
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );

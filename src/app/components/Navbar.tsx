@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useAuth } from '@/context/AuthContext';  // Add this import
+import { useAuth } from '../../context/AuthContext'; // adjusted relative path
 
 export default function Navbar() {
     const [theme, setTheme] = useState("light");
