@@ -9,59 +9,44 @@ import Link from 'next/link';
 export default function WithdrawPage() {
     const { profile, refreshProfile } = useAuth();
     const [isLoading, setIsLoading] = useState(true);
-    const router = useRouter();
+    const [needsPin, setNeedsPin] = useState(false);
 
     useEffect(() => {
-        const checkPin = async () => {
-            try {
-                await refreshProfile(); // Refresh profile data first
-                if (!profile?.transaction_pin) {
-                    console.log('No PIN found, redirecting...');
-                    router.push('/dashboard/settings/transaction-pin');
-                    return;
-                }
-                setIsLoading(false);
-            } catch (error) {
-                console.error('Error checking PIN:', error);
-                setIsLoading(false);
-            }
-        };
+        if (profile) {
+            setNeedsPin(!profile.transaction_pin);
+            setIsLoading(false);
+        }
+    }, [profile]);
 
-        checkPin();
-    }, [profile?.transaction_pin, refreshProfile, router]); // Add missing dependencies
-
-    // Show loading state
-    if (isLoading || !profile) {
-        return (
-            <div className="container mx-auto px-4 py-8">
-                <div className="text-center">Loading...</div>
-            </div>
-        );
+    if (isLoading) {
+        return <div>Loading...</div>;
     }
 
-    // If there's no PIN, show the redirect message
-    if (!profile.transaction_pin) {
+    if (needsPin) {
         return (
-            <div className="container mx-auto px-4 py-8">
-                <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-                    <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                        Transaction PIN Required
-                    </h1>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        For your security, you need to set up a transaction PIN before making withdrawals.
-                    </p>
+            <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mt-8">
+                <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-yellow-100 dark:bg-yellow-900">
+                        <svg className="w-8 h-8 text-yellow-600 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m0 0v2m0-2h2m-2 0H10m5-7V6a3 3 0 00-3-3H7a3 3 0 00-3 3v7m14 0v2a3 3 0 01-3 3H7a3 3 0 01-3-3v-2m14 0h-3m-7 0h-3" />
+                        </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Transaction PIN Required</h2>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6">For your security, please set up your transaction PIN before making any withdrawals.</p>
                     <Link
                         href="/dashboard/settings/transaction-pin"
-                        className="inline-block px-6 py-3 bg-[#308e87] text-white rounded-lg hover:bg-[#277771] transition-colors"
+                        className="inline-flex items-center px-6 py-3 bg-[#308e87] hover:bg-[#277772] transition-colors duration-200 text-white font-semibold rounded-lg"
                     >
-                        Set Up Transaction PIN
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        Set Up PIN
                     </Link>
                 </div>
             </div>
         );
     }
 
-    // Show withdrawal form only if PIN exists
     return (
         <div className="container mx-auto px-4 py-8">
             <div className="mb-8">

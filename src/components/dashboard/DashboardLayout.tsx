@@ -4,6 +4,7 @@ import { useState } from 'react';
 import DashboardSidebar from './DashboardSidebar';
 import DashboardNavbar from './DashboardNavbar';
 import { User } from '@/types/auth';
+import { useAuth } from '@/context/AuthContext';
 
 interface DashboardLayoutProps {
     children: React.ReactNode;
@@ -11,15 +12,25 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const { profile } = useAuth();
 
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <DashboardNavbar onMenuClick={() => setSidebarOpen(true)} />
-            <DashboardSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            {/* Single Navbar with user info */}
+            <DashboardNavbar
+                onMenuClick={() => setSidebarOpen(true)}
+                username={profile?.username}
+                email={profile?.email}
+            />
 
-            {/* Main Content - Adjusted spacing */}
+            <DashboardSidebar
+                isOpen={sidebarOpen}
+                onClose={() => setSidebarOpen(false)}
+            />
+
+            {/* Main Content */}
             <div className="lg:pl-64">
-                <div className="p-6 mt-16"> {/* Added mt-16 for navbar height */}
+                <div className="p-6 mt-16">
                     {children}
                 </div>
             </div>
