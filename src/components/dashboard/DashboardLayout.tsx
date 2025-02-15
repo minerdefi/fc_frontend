@@ -4,7 +4,7 @@ import { useState } from 'react';
 import DashboardSidebar from './DashboardSidebar';
 import DashboardNavbar from './DashboardNavbar';
 import { User } from '@/types/auth';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 interface DashboardLayoutProps {
     children: React.ReactNode;
