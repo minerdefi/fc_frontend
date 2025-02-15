@@ -40,7 +40,7 @@ export default function ProfilePage() {
                                 <div>
                                     <label className="text-sm text-gray-500 dark:text-gray-400">Member Since</label>
                                     <p className="text-gray-900 dark:text-white">
-                                        {new Date(profile?.created_at).toLocaleDateString()}
+                                        {profile?.created_at ? new Date(profile.created_at).toLocaleDateString() : 'Not available'}
                                     </p>
                                 </div>
                             </div>

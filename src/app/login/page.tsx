@@ -35,22 +35,17 @@ const LoginPage = () => {
         e.preventDefault();
         setApiError(null);
         setErrors({});
-
-        const newErrors: Record<string, string> = {};
-        if (!formData.login) newErrors.login = 'Username or Email is required';
-        if (!formData.password) newErrors.password = 'Password is required';
-
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            return;
-        }
-
         setIsLoading(true);
+
         try {
+            console.log('Login: Attempting login with:', formData);
             await login(formData.login, formData.password);
-            // Navigation is handled in the AuthContext
         } catch (error: any) {
-            setApiError(error.message || 'Login failed. Please check your credentials.');
+            console.error('Login page error:', error);
+            setApiError(
+                error.message ||
+                'Login failed. Please check your credentials and try again.'
+            );
             setIsLoading(false);
         }
     };

@@ -11,13 +11,42 @@ export const authOptions: NextAuthOptions = {
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                // ...existing authorize logic...
+                if (!credentials?.email || !credentials?.password) {
+                    return null;
+                }
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/auth/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            email: credentials.email,
+                            password: credentials.password,
+                        }),
+                    });
+
+                    const user = await response.json();
+
+                    if (!response.ok) {
+                        return null;
+                    }
+
+                    return {
+                        id: user.id,
+                        email: user.email,
+                        name: user.name,
+                        accessToken: user.accessToken || '',
+                        refreshToken: user.refreshToken || '',
+                    };
+                } catch (error) {
+                    console.error('Auth error:', error);
+                    return null;
+                }
             }
         }),
-        GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID ?? '',
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
-        })
+
     ],
     session: {
         strategy: 'jwt',

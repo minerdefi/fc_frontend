@@ -37,6 +37,11 @@ interface ChartData {
         data: number[];
         borderColor: string;
         backgroundColor: string;
+        borderWidth?: number;
+        fill?: boolean;
+        tension?: number;
+        pointRadius?: number;
+        pointHitRadius?: number;
     }[];
 }
 
