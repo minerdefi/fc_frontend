@@ -48,6 +48,7 @@ export default function Navbar() {
     const navigation = [
         { name: 'Home', href: '/' },
         { name: 'Portfolio', href: '/portfolio' },
+        { name: 'Funds', href: '/funds' },
         { name: 'Team', href: '/team' },
         { name: 'Contact', href: '/contact' },
         // Methodology item removed

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -16,7 +17,7 @@ const VerifyEmailPage: React.FC = () => {
 
     useEffect(() => {
         const verifyEmail = async () => {
-            const token = searchParams.get('token');
+            const token = searchParams?.get('token');
             if (!token) {
                 setStatus('error');
                 setMessage('Invalid verification link');

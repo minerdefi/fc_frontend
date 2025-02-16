@@ -6,6 +6,7 @@ export default function FundHoldings() {
     const holdings = [
         {
             name: "Bitcoin",
+            // removed "logo" and replaced with "logoLink"
             logo: "BTC.svg",
             weight: "70.8%",
             marketCap: "$2,040,278,997,721",
@@ -15,6 +16,7 @@ export default function FundHoldings() {
         },
         {
             name: "Ethereum",
+            // added custom logo URL for Ethereum
             logo: "ETH.svg",
             weight: "16.7%",
             marketCap: "$468,536,593,345",
@@ -59,7 +61,7 @@ export default function FundHoldings() {
             isPositive: true
         },
         {
-            name: "Chainlink",
+            name: "ChainLink",
             logo: "LINK.svg",
             weight: "0.6%",
             marketCap: "$17,989,340,476",
@@ -68,13 +70,13 @@ export default function FundHoldings() {
             isPositive: false
         },
         {
-            name: "Bitcoin Cash",
-            logo: "BCH.svg",
+            name: "Sui",
+            logo: "SUI.svg",
             weight: "0.4%",
-            marketCap: "$10,651,203,330",
-            price: "$538.17",
-            change: "3.3%",
-            isPositive: true
+            marketCap: "$10,210,264,950",
+            price: "$3.39",
+            change: "-4.5%",
+            isPositive: false
         },
         {
             name: "Polkadot",
@@ -86,12 +88,12 @@ export default function FundHoldings() {
             isPositive: true
         },
         {
-            name: "NEAR Protocol",
-            logo: "NEAR.svg",
-            weight: "0.3%",
-            marketCap: "$8,226,956,077",
-            price: "$6.76",
-            change: "3.8%",
+            name: "Litecoin",
+            logo: "LTC.svg",
+            weight: "0.4%",
+            marketCap: "$9,844,658,957",
+            price: "$130.47",
+            change: "2.9%",
             isPositive: true
         }
     ];
@@ -142,7 +144,7 @@ export default function FundHoldings() {
                                         >
                                             <td className="px-6 py-4 whitespace-nowrap flex items-center">
                                                 <CryptoLogo
-                                                    symbol={holding.logo.replace('.svg', '')}
+                                                    symbol={holding.logo.replace('.svg', '')} // now using logoLink only
                                                     name={holding.name}
                                                     className="mr-3"
                                                 />
@@ -159,8 +161,7 @@ export default function FundHoldings() {
                                             <td className="px-6 py-4 whitespace-nowrap text-gray-600 dark:text-gray-300">
                                                 {holding.price}
                                             </td>
-                                            <td className={`px-6 py-4 whitespace-nowrap ${holding.isPositive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
-                                                }`}>
+                                            <td className={`px-6 py-4 whitespace-nowrap ${holding.isPositive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                                                 {holding.change}
                                             </td>
                                         </motion.tr>

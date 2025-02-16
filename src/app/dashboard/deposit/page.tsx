@@ -88,8 +88,8 @@ export default function DepositPage() {
     const selectedWallet = wallets.find(w => w.cryptocurrency === selectedCrypto && w.status === 'active');
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="container mx-auto px-2 py-4">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Deposit Funds
             </h1>
 
@@ -99,7 +99,7 @@ export default function DepositPage() {
                 </div>
             )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4"> {/* reduced gap */}
                 {/* Left Column - Cryptocurrency Selection */}
                 <div className="space-y-6">
                     <CryptocurrencySelector

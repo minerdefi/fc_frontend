@@ -24,7 +24,7 @@ export default function WithdrawPage() {
 
     if (needsPin) {
         return (
-            <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mt-8">
+            <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 mt-4">
                 <div className="text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-yellow-100 dark:bg-yellow-900">
                         <svg className="w-8 h-8 text-yellow-600 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function WithdrawPage() {
     }
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-2 py-4">
             <div className="mb-8">
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                     Withdraw Funds
@@ -66,7 +66,8 @@ export default function WithdrawPage() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Mobile-optimized grid: extra vertical spacing on mobile */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-4 lg:space-y-0">
                 <WithdrawalForm
                     availableBalance={profile?.avail_balance || '0.00'}
                     onSuccess={async () => {

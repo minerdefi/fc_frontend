@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['127.0.0.1', 'localhost', 'fc-backend-cnxm.onrender.com'],
+    domains: ['127.0.0.1', 'localhost', 'minerdefi.pythonanywhere.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,

@@ -57,44 +57,40 @@ export default function TermsPage() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="container mx-auto px-4 sm:px-6 lg:px-8 py-24"
+                    className="container mx-auto px-2 sm:px-4 lg:px-6 py-8 sm:py-12"
                 >
-                    <div className="bg-white/80 dark:bg-gray-800/80 rounded-3xl overflow-hidden backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
-                        <div className="p-6 md:p-8 lg:p-12">
-                            <section className="py-8 max-w-7xl mx-auto lg:text-xl titillium-web-light">
-                                <div className="container mx-auto">
-                                    <motion.h1
+                    <section className="p-4 max-w-7xl mx-auto text-base titillium-web-light">
+                        <div className="container mx-auto">
+                            <motion.h1
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="text-2xl sm:text-3xl font-normal mb-8 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent"
+                            >
+                                Terms of Use Agreement
+                            </motion.h1>
+
+                            <div className="space-y-8">
+                                {sections.map((section, index) => (
+                                    <motion.div
+                                        key={index}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="text-4xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent"
+                                        transition={{ delay: index * 0.1 }}
+                                        className="space-y-4"
                                     >
-                                        Terms of Use Agreement
-                                    </motion.h1>
-
-                                    <div className="space-y-8">
-                                        {sections.map((section, index) => (
-                                            <motion.div
-                                                key={index}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: index * 0.1 }}
-                                                className="space-y-4"
-                                            >
-                                                <h2 className="text-2xl font-semibold titillium-web-semibold text-gray-900 dark:text-gray-100">
-                                                    {section.title}
-                                                </h2>
-                                                {section.content.map((paragraph, pIndex) => (
-                                                    <p key={pIndex} className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                                        {paragraph}
-                                                    </p>
-                                                ))}
-                                            </motion.div>
+                                        <h2 className="text-2xl font-semibold titillium-web-semibold text-gray-900 dark:text-gray-100 mt-4">
+                                            {section.title}
+                                        </h2>
+                                        {section.content.map((paragraph, pIndex) => (
+                                            <p key={pIndex} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                                {paragraph}
+                                            </p>
                                         ))}
-                                    </div>
-                                </div>
-                            </section>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </motion.div>
             </div>
         </PageLayout>
