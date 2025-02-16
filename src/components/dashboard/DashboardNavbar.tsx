@@ -60,14 +60,7 @@ const DashboardNavbar = ({ onMenuClick, username, email }: DashboardNavbarProps)
                             />
                         </button>
 
-                        {/* Notifications */}
-                        <button className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 relative">
-                            <FontAwesomeIcon
-                                icon={faBell}
-                                className="h-5 w-5 text-gray-600 dark:text-gray-300"
-                            />
-                            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-                        </button>
+
 
                         {/* User Menu */}
                         <div className="relative">

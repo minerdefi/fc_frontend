@@ -10,7 +10,7 @@ export default function CryptoLogo({ symbol, name, className = "h-8 w-8" }: Cryp
     return (
         <div className={className}>
             <Image
-                src={`/images/coins/${symbol}.svg`}
+                src={`/images/${symbol}.svg`}
                 alt={`${name} Logo`}
                 width={32}
                 height={32}

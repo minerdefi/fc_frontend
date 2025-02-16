@@ -89,7 +89,42 @@ export default function TransactionsPage() {
                 Transaction History
             </h1>
 
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+            {/* Mobile View */}
+            <div className="md:hidden space-y-4">
+                {transactions.map((transaction, index) => (
+                    <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-md shadow border border-gray-200 dark:border-gray-700">
+                        <div className="flex justify-between items-center">
+                            <div className="flex items-center">
+                                <span className={`p-2 rounded-md bg-${getTransactionColor(transaction.transaction_type)}-100 dark:bg-${getTransactionColor(transaction.transaction_type)}-900/20 mr-2`}>
+                                    <FontAwesomeIcon
+                                        icon={getTransactionIcon(transaction.transaction_type)}
+                                        className={`h-4 w-4 text-${getTransactionColor(transaction.transaction_type)}-600 dark:text-${getTransactionColor(transaction.transaction_type)}-400`}
+                                    />
+                                </span>
+                                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                                    {transaction.transaction_type.replace('_', ' ').toUpperCase()}
+                                </span>
+                            </div>
+                            <span className={`px-2 inline-flex text-xs font-semibold rounded-full ${transaction.status === 'completed'
+                                    ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
+                                    : transaction.status === 'pending'
+                                        ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
+                                        : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
+                                }`}>
+                                {transaction.status.toUpperCase()}
+                            </span>
+                        </div>
+                        <div className="mt-2 space-y-1">
+                            <p className="text-sm text-gray-700 dark:text-gray-300">Description: {transaction.description}</p>
+                            <p className="text-sm text-gray-700 dark:text-gray-300">Amount: {transaction.amount}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">Date: {transaction.time}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Desktop Table View */}
+            <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="overflow-x-auto">
                     <table className="w-full">
                         <thead>
@@ -124,9 +159,11 @@ export default function TransactionsPage() {
                                         <div className="text-sm font-medium text-gray-900 dark:text-white">{transaction.amount}</div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${transaction.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
-                                            transaction.status === 'pending' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' :
-                                                'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
+                                        <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${transaction.status === 'completed'
+                                                ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
+                                                : transaction.status === 'pending'
+                                                    ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
+                                                    : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
                                             }`}>
                                             {transaction.status.toUpperCase()}
                                         </span>
@@ -139,7 +176,6 @@ export default function TransactionsPage() {
                         </tbody>
                     </table>
                 </div>
-
                 {/* Pagination */}
                 <div className="px-6 py-4 flex items-center justify-between border-t border-gray-200 dark:border-gray-700">
                     <button
