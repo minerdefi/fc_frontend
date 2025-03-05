@@ -1,8 +1,8 @@
 export default function FundDetails() {
     const details = [
-        { label: "Ticker", value: "FCW" },
-        { label: "Bloomberg", value: "FCW US" },
-        { label: "Benchmark Index", value: "FC 10 Large Cap Crypto Index" },
+        { label: "Ticker", value: "FGW" },
+        { label: "Bloomberg", value: "FGW US" },
+        { label: "Benchmark Index", value: "FG 10 Large Cap Crypto Index" },
         { label: "Index Rebalancing", value: "Monthly" },
         { label: "CUSIP", value: "091749101" },
         { label: "ISIN", value: "US0917491013" },

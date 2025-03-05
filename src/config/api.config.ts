@@ -1,4 +1,4 @@
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://fc-backend-cnxm.onrender.com';
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://minerdefi.pythonanywhere.com';
 
 export const API_ENDPOINTS = {
     auth: {

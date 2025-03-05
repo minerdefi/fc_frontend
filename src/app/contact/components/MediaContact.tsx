@@ -41,7 +41,7 @@ export default function MediaContact() {
                         { icon: faLinkedin, href: "#" },
                         { icon: faTwitter, href: "#" },
                         { icon: faFacebook, href: "#" },
-                        { icon: faEnvelope, href: "mailto:michellerobert@forbespartners.org" }
+                        { icon: faEnvelope, href: "mailto:support@fgpremiumfunds.com" }
                     ].map((social, index) => (
                         <motion.a
                             key={index}

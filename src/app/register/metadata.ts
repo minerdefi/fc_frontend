@@ -1,4 +1,4 @@
 export const metadata = {
-    title: 'Register - Forbes Capital',
-    description: 'Create your Forbes Capital account',
+    title: 'Register - FG Premium Funds',
+    description: 'Create your FG Premium Funds account',
 };

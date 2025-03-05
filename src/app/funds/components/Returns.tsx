@@ -13,38 +13,38 @@ export default function Returns() {
 
     const returnsData: ReturnsData = {
         '1-month': {
-            'FC 10 Crypto Index Fund (NAV) *': '20.0%',
-            'Secondary Market Performance (OTCQX: FCW)': '38.3%',
+            'FG 10 Crypto Index Fund (NAV) *': '20.0%',
+            'Secondary Market Performance (OTCQX: FGW)': '38.3%',
             'Bitwise 10 Large Cap Crypto Index **': '20.2%',
             'Bitcoin ***': '13.3%'
         },
         '3-months': {
-            'FC 10 Crypto Index Fund (NAV) *': '74.2%',
-            'Secondary Market Performance (OTCQX: FCW)': '139.3%',
+            'FG 10 Crypto Index Fund (NAV) *': '74.2%',
+            'Secondary Market Performance (OTCQX: FGW)': '139.3%',
             'Bitwise 10 Large Cap Crypto Index **': '75.3%',
             'Bitcoin ***': '70.2%'
         },
         'ytd': {
-            'FC 10 Crypto Index Fund (NAV) *': '118.0%',
-            'Secondary Market Performance (OTCQX: FCW)': '183.8%',
+            'FG 10 Crypto Index Fund (NAV) *': '118.0%',
+            'Secondary Market Performance (OTCQX: FGW)': '183.8%',
             'Bitwise 10 Large Cap Crypto Index **': '123.2%',
             'Bitcoin ***': '142.1%'
         },
         '12-months': {
-            'FC 10 Crypto Index Fund (NAV) *': '118.2%',
-            'Secondary Market Performance (OTCQX: FCW)': '179.6%',
+            'FG 10 Crypto Index Fund (NAV) *': '118.2%',
+            'Secondary Market Performance (OTCQX: FGW)': '179.6%',
             'Bitwise 10 Large Cap Crypto Index **': '123.8%',
             'Bitcoin ***': '137.1%'
         },
         'since-inception': {
-            'FC 10 Crypto Index Fund (NAV) *': '655.1%',
-            'Secondary Market Performance (OTCQX: FCW)': 'N/A',
+            'FG 10 Crypto Index Fund (NAV) *': '655.1%',
+            'Secondary Market Performance (OTCQX: FGW)': 'N/A',
             'Bitwise 10 Large Cap Crypto Index **': '780.0%',
             'Bitcoin ***': '1133.1%'
         },
         'since-otcqx': {
-            'FC 10 Crypto Index Fund (NAV) *': '353.6%',
-            'Secondary Market Performance (OTCQX: FCW)': '119.4%',
+            'FG 10 Crypto Index Fund (NAV) *': '353.6%',
+            'Secondary Market Performance (OTCQX: FGW)': '119.4%',
             'Bitwise 10 Large Cap Crypto Index **': '400.5%',
             'Bitcoin ***': '454.9%'
         }
@@ -146,7 +146,7 @@ export default function Returns() {
                         <p>* Fund returns are calculated net of expenses. Shares are subject to a 2.5% annual fee that includes the management fee, custody charges for holding the fund's assets charged by the custodian, and customary fees and expenses of the fund administrator and auditor.</p>
                         <p>** Performance of an index is not illustrative of any particular investment. It is not possible to invest directly in an index. Index performance does not include the fees and expenses that are charged by the Fund. Past performance is not indicative of future performance.</p>
                         <p>*** The returns of bitcoin (BTC) are historical and unaudited and do not represent the returns of an actual account. These historical returns do not include the fees and expenses that are charged by any Fund.</p>
-                        <p>† FC 10 Crypto Index Fund inception date: November 22, 2017.</p>
+                        <p>† FG 10 Crypto Index Fund inception date: November 22, 2017.</p>
                         <p>‡ Inception of quotation on OTCQX: December 9, 2020.</p>
                     </div>
                 </motion.div>

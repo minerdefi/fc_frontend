@@ -163,7 +163,7 @@ const RegisterPage = () => {
                                 <Link href="/" className="inline-block">
                                     <Image
                                         src="/images/fc1.png"
-                                        alt="Forbes Capital"
+                                        alt="FG Premium Funds"
                                         width={80}
                                         height={80}
                                         className="dark:invert transform hover:scale-105 transition-transform duration-200"
@@ -343,7 +343,7 @@ const RegisterPage = () => {
                                                         Privacy Policy
                                                     </Link>
                                                     <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                                                        Forbes Capital is regulated and authorized by the Financial Conduct Authority (FCA)
+                                                        FG Premium Funds is regulated and authorized by the Financial Conduct Authority (FCA)
                                                     </p>
                                                 </label>
                                             </div>

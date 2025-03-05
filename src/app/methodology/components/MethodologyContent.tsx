@@ -12,7 +12,7 @@ export default function MethodologyContent({ toggleSidebar }: MethodologyContent
             {/* Header */}
             <div className="flex justify-between items-center mb-8 bg-white/80 dark:bg-gray-800/80 p-4 rounded-xl backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                    ForbesCapital Crypto Asset Index Methodology
+                    FG Premium Funds Crypto Asset Index Methodology
                 </h1>
                 <button onClick={toggleSidebar} className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors">
                     <FontAwesomeIcon icon={faBars} className="text-xl" />
@@ -30,7 +30,7 @@ export default function MethodologyContent({ toggleSidebar }: MethodologyContent
                     {
                         icon: faUsers,
                         title: "Index Committee",
-                        description: "The ForbesCapital Crypto Indexes are supported and maintained by industry experts."
+                        description: "The FG Premium Funds Crypto Indexes are supported and maintained by industry experts."
                     },
                     {
                         icon: faChartLine,
@@ -40,7 +40,7 @@ export default function MethodologyContent({ toggleSidebar }: MethodologyContent
                     {
                         icon: faLayerGroup,
                         title: "Investable Indexes",
-                        description: "The ForbesCapital Crypto Indexes include large cap, mid cap, small cap and total market indexes."
+                        description: "The FG Premium Funds Crypto Indexes include large cap, mid cap, small cap and total market indexes."
                     }
                 ].map((card, index) => (
                     <motion.div

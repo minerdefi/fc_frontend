@@ -24,7 +24,7 @@ export default function OurFirm() {
                             </motion.h2>
                             <div className="space-y-4 text-gray-600 dark:text-gray-300">
                                 <p className="mb-4">
-                                    Forbes Capital is a thesis-driven investment firm that invests in cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and several venture funds, investing across both public and private markets.
+                                    FG Premium Funds is a thesis-driven investment firm that invests in cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and several venture funds, investing across both public and private markets.
                                 </p>
                                 <p className="mb-4">
                                     Since founding the firm in May 2017, we've developed a reputation for being forward-leaning, independent thinkers. We are known for pioneering token economic models, valuation methodologies, and challenging long-standing assumptions that the crypto ecosystem takes for granted.

@@ -13,7 +13,7 @@ export default function BlogPostPage() {
                     {/* Category */}
                     <ul className="mb-4">
                         <li>
-                            <a href="#" className="text-base text-left text-lg hover:text-[#308e87] titillium-web-semibold">
+                            <a href="#" className=" text-left text-lg hover:text-[#308e87] titillium-web-semibold">
                                 FEATURED
                             </a>
                         </li>

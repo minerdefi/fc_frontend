@@ -37,7 +37,7 @@ export default function ContactPage() {
                                         If you're interested in investing in our funds, please fill out the form below and we'll get back to you promptly.
                                     </p>
                                     <p className="mb-4">
-                                        We'd also love to hear from you if you're working on a crypto- or blockchain-related project or company. Fair warning: we get a lot of these pitches. If you can manage a warm intro that helps us to qualify you quickly. If you can't, just hold steady we'll get back to you as fast as we possibly can. If you're interested in working at Forbes Capital, please see our careers page for job opportunities. For all other inquiries, please use the form below.
+                                        We'd also love to hear from you if you're working on a crypto- or blockchain-related project or company. Fair warning: we get a lot of these pitches. If you can manage a warm intro that helps us to qualify you quickly. If you can't, just hold steady we'll get back to you as fast as we possibly can. If you're interested in working at FG Premium Funds, please see our careers page for job opportunities. For all other inquiries, please use the form below.
                                     </p>
                                 </div>
                             </motion.div>

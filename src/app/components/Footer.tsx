@@ -15,7 +15,7 @@ export default function Footer() {
                         <Link href="/" className="flex items-center mb-4">
                             <Image
                                 src="/images/fc1.png"
-                                alt="Forbes Capital"
+                                alt="FG Premium Funds"
                                 width={40}
                                 height={40}
                                 className="dark:invert"
@@ -98,7 +98,7 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-base text-gray-500">
-                            © {new Date().getFullYear()} Forbes Capital. All rights reserved.
+                            © {new Date().getFullYear()} FG Premium Funds. All rights reserved.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">

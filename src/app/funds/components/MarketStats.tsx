@@ -36,13 +36,13 @@ export default function MarketStats() {
                 </motion.div>
                 <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
                     <p>* Market price as of December 13, 2024 9:00 PM GMT+1.</p>
-                    <p>** Intraday NAV as of December 13, 2024 10:00 PM GMT+1. Estimate calculated by FC each hour.</p>
+                    <p>** Intraday NAV as of December 13, 2024 10:00 PM GMT+1. Estimate calculated by FG each hour.</p>
                     <p>† Estimated AUM as of December 13, 2024 10:45 PM GMT+1; non-GAAP, unaudited.</p>
                     <p>‡ Estimated NAV per share as of December 12, 2024 10:00 PM GMT+1; non-GAAP, unaudited.</p>
                 </div>
 
                 <p className="text-sm text-gray-500 mt-2">
-                    Shares of the FC 10 Crypto Index Fund are registered with the Securities and Exchange Commission pursuant to Section 12(g) of the Securities and Exchange Act of 1934, as amended. The Shares are not registered under the Securities Act of 1933 (the "Securities Act"), the Investment Company Act of 1940 (the "Investment Company Act"), or any state securities commission or any other regulatory body. The Fund does not currently operate a redemption program.
+                    Shares of the FG 10 Crypto Index Fund are registered with the Securities and Exchange Commission pursuant to Section 12(g) of the Securities and Exchange Act of 1934, as amended. The Shares are not registered under the Securities Act of 1933 (the "Securities Act"), the Investment Company Act of 1940 (the "Investment Company Act"), or any state securities commission or any other regulatory body. The Fund does not currently operate a redemption program.
                 </p>
             </div>
         </section>

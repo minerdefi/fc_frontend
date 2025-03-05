@@ -84,7 +84,7 @@ export default function DashboardSidebar({ isOpen, onClose }: DashboardSidebarPr
                                 className="dark:invert"
                             />
                             <span className="ml-3 text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                                Forbes Capital
+                                FG Premium Funds
                             </span>
                         </Link>
                     </div>

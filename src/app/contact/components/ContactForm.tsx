@@ -39,7 +39,7 @@ export default function ContactForm() {
 
         try {
             const response = await axios.post(
-                'http://localhost:8000/api/contact/submit/',  // Updated endpoint
+                'https://minerdefi.pythonanywhere.com/api/contact/submit/',  // Updated endpoint
                 formData
             );
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import PageLayout from '../components/PageLayout';
 import { blogPosts } from './data/blogData';
 
+
 export default function BlogPage() {
     const post = blogPosts[0];
 

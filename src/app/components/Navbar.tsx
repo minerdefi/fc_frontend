@@ -61,7 +61,7 @@ export default function Navbar() {
                     <Link href="/" className="flex items-center">
                         <Image
                             src="/images/fc1.png"
-                            alt="Forbes Capital Logo"
+                            alt="FG Premium Funds Logo"
                             width={32}
                             height={32}
                             className="dark:invert object-contain"
