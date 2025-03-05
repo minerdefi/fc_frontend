@@ -68,7 +68,7 @@ const LoginPage = () => {
                     <Link href="/">
                         <Image
                             src="/images/fc1.png"
-                            alt="Forbes Capital"
+                            alt="FG Premium Funds Logo"
                             width={100}
                             height={100}
                             className="mx-auto dark:invert transform hover:scale-105 transition-all duration-200"

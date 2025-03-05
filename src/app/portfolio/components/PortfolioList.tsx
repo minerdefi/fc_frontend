@@ -74,7 +74,7 @@ export default function PortfolioList() {
 
                 <div className="mt-8 text-sm text-gray-600 dark:text-gray-400">
                     <p className="mb-2">
-                        <b className="font-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by Forbes Capital and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results.
+                        <b className="font-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by FG Premium Funds and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results.
                     </p>
                     {/* ...rest of the disclosure text... */}
                 </div>

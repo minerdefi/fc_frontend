@@ -16,7 +16,7 @@ export default function ForgotPasswordPage() {
         setMessage(null);
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/auth/forgot-password/', {
+            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/forgot-password/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,8 +80,8 @@ export default function ForgotPasswordPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         className={`p-4 rounded-lg ${message.type === 'success'
-                                ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
-                                : 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
+                            ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
+                            : 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
                             }`}
                     >
                         {message.text}

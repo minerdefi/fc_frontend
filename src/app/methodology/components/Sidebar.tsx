@@ -28,7 +28,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             >
                 <div className="flex items-center justify-between">
                     <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                        ForbesCapital®
+                        FGPremiumFunds®
                     </h1>
                     <button
                         onClick={() => setIsOpen(false)}
@@ -43,8 +43,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                         {
                             title: "Governance",
                             items: [
-                                "ForbesCapital Crypto Index Committee",
-                                "ForbesCapital Crypto Index Advisory Board"
+                                "FG Premium Funds Crypto Index Committee",
+                                "FG Premium Funds Crypto Index Advisory Board"
                             ]
                         },
                         {

@@ -126,7 +126,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             const token = authService.getAccessToken();
             if (!token) return;
 
-            const response = await fetch('http://127.0.0.1:8000/auth/profile/', {
+            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/profile/', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 }

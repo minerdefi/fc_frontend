@@ -1,6 +1,6 @@
 // metadata.ts
 export const metadata = {
-    title: "Forbes Capital",
+    title: "FG Premium Funds",
     description: "grow your investment wealth...",
     icons: {
         icon: "/images/fc1.png",

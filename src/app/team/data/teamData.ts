@@ -73,8 +73,8 @@ export const teamMembers: TeamMemberType[] = [
         title: "Partner, General Counsel",
         image: "https://images.ctfassets.net/qtbqvna1l0yq/3br4X1Ez4jIKeA5jscDJUT/bd374c7934e4b2c4f389778e99f9b0ad/Gregoy_Xethalis_copy.jpeg?w=448&h=446&q=50&fm=webp",  // Updated to local path
         bio: [
-            "William Xethalis is General Counsel of Forbes Capital Management LLC. Joining Forbes in July 2021, William manages all legal and policy functions for the firm and works with our portfolio companies on legal and policy strategy.",
-            "Prior to joining Forbes, William was a partner in the Investment Management and FinTech practices at Chapman and Cutler LLP. with 11 years of experience counseling clients on digital asset matters, with a focus on asset managers, CeFi institutions and stable value tokens. William's practice also involved representation of traditional equity, debt and commodity asset managers, with a specialty in novel registered products. William is a member of the Board of the Fordham Law Alumni Association and Senior Lecturing Fellow at Duke University School of Law, where he teaches Fintech and Blockchain Law and Policy."
+            "William Xethalis is General Counsel of FG Premium Funds Management LLC. Joining Forbes in July 2021, William manages all legal and policy functions for the firm and works with our portfolio companies on legal and policy strategy.",
+            "Prior to joining FG, William was a partner in the Investment Management and FinTech practices at Chapman and Cutler LLP. with 11 years of experience counseling clients on digital asset matters, with a focus on asset managers, CeFi institutions and stable value tokens. William's practice also involved representation of traditional equity, debt and commodity asset managers, with a specialty in novel registered products. William is a member of the Board of the Fordham Law Alumni Association and Senior Lecturing Fellow at Duke University School of Law, where he teaches Fintech and Blockchain Law and Policy."
         ],
         social: {
             linkedin: "#"
@@ -85,8 +85,8 @@ export const teamMembers: TeamMemberType[] = [
         title: "Partner, Head of Communications",
         image: "https://forbes-partners.com/wp-content/uploads/2022/04/kelly-fitzgerald-sm.jpg",  // Updated to local path
         bio: [
-            "Michelle leads communications and marketing strategy at Forbes Capital. She brings over a decade of experience in strategic communications, brand development, and digital marketing in the financial services and technology sectors.",
-            "Prior to Forbes Capital, Michelle held senior communications roles at leading crypto and fintech companies, where she helped shape narratives around emerging technologies and financial innovation."
+            "Michelle leads communications and marketing strategy at FG Premium Funds. She brings over a decade of experience in strategic communications, brand development, and digital marketing in the financial services and technology sectors.",
+            "Prior to FG Premium Funds, Michelle held senior communications roles at leading crypto and fintech companies, where she helped shape narratives around emerging technologies and financial innovation."
         ],
         social: {
             twitter: "#",

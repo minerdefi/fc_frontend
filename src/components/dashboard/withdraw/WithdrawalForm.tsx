@@ -64,7 +64,7 @@ export function WithdrawalForm({ availableBalance, onSuccess }: WithdrawalFormPr
                 throw new Error('Authentication required');
             }
 
-            const response = await fetch('http://127.0.0.1:8000/auth/withdrawals/create/', {
+            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/withdrawals/create/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

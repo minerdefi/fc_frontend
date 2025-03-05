@@ -22,7 +22,7 @@ export default function HeroSection() {
                         Publicly Traded
                     </motion.h6>
                     <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-snug lg:leading-snug text-gray-100 mt-2">
-                        ForbesCapital 10 Crypto Index Fund
+                        FG Premium Funds 10 Crypto Index Fund
                     </h1>
                     <div className="mt-4">
                         <p className="text-xl font-light text-gray-300">

@@ -13,10 +13,10 @@ export default function InvestSection() {
                     className="text-center"
                 >
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight bg-black dark:bg-gray-300 bg-clip-text text-transparent mb-6">
-                        Become an investor in the FC 10 Crypto Index Fund today
+                        Become an investor in the FG 10 Crypto Index Fund today
                     </h2>
                     <p className="text-lg md:text-xl mb-8 text-white dark:text-gray-300">
-                        The FC 10 Crypto Index Fund is a smart and convenient way to invest in the cryptocurrency market. It currently has a $100,000 minimum investment.
+                        The FG 10 Crypto Index Fund is a smart and convenient way to invest in the cryptocurrency market. It currently has a $100,000 minimum investment.
                     </p>
                     <motion.a
                         whileHover={{ scale: 1.05 }}
