@@ -17,7 +17,7 @@ export default function KeyFacts() {
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         <div className="flex flex-col">
                             <h5 className="text-xl font-semibold">Minimum Investment</h5>
-                            <p className="text-xl">$100,000</p>
+                            <p className="text-xl">$300,000</p>
                             <hr className="border text-gray-600 md:hidden" />
                         </div>
                         <div className="flex flex-col">
@@ -38,18 +38,18 @@ export default function KeyFacts() {
                         <div className="flex flex-col">
                             <h5 className="text-xl font-semibold">Investor Qualifications</h5>
                             <p className="text-xl">
-                                Investors must be non-U.S. persons or tax-exempt U.S.&nbsp;
+                                Upgrade,
                                 <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3"
                                     target="_blank"
                                     rel="noopener"
                                     className="text-[#308e87] hover:underline">
-                                    accredited investors
+                                    Accredited Investors
                                 </a>
                             </p>
                         </div>
                         <div className="flex flex-col">
                             <p className="text-sm">
-                                * Requires a two weeks notice period. For the first 36 months, redemptions may incur a 9% early withdrawal fee. No withdrawal fee after 36 months.
+                                * Requires a 48 hour notice . For the first 18 months, redemptions may incur a 9% early withdrawal fee. No withdrawal fee after 36 months.
                             </p>
                         </div>
                     </div>

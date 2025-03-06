@@ -23,7 +23,7 @@ const Navbar = () => {
                         <Link href="/">
                             <Image
                                 src="/images/fc1.png"
-                                alt="Forbes Capital"
+                                alt="FG Premium Logo"
                                 width={40}
                                 height={40}
                                 className="dark:invert"

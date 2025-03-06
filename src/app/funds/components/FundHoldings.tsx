@@ -1,102 +1,73 @@
 "use client";
 import { motion } from 'framer-motion';
 import CryptoLogo from '../../components/CryptoLogo';
+import { useEffect, useState } from 'react';
 
-export default function FundHoldings() {
-    const holdings = [
-        {
-            name: "Bitcoin",
-            // removed "logo" and replaced with "logoLink"
-            logo: "BTC.svg",
-            weight: "70.8%",
-            marketCap: "$2,040,278,997,721",
-            price: "$103,119.15",
-            change: "2.4%",
-            isPositive: true
-        },
-        {
-            name: "Ethereum",
-            // added custom logo URL for Ethereum
-            logo: "ETH.svg",
-            weight: "16.7%",
-            marketCap: "$468,536,593,345",
-            price: "$3,890.61",
-            change: "1.5%",
-            isPositive: true
-        },
-        {
-            name: "Solana",
-            logo: "SOL.svg",
-            weight: "3.8%",
-            marketCap: "$104,628,942,385",
-            price: "$220.41",
-            change: "2.2%",
-            isPositive: true
-        },
-        {
-            name: "XRP",
-            logo: "XRP.svg",
-            weight: "4.9%",
-            marketCap: "$137,141,669,273",
-            price: "$2.41",
-            change: "2.0%",
-            isPositive: true
-        },
-        {
-            name: "Cardano",
-            logo: "ADA.svg",
-            weight: "3.8%",
-            marketCap: "$38,749,223,026",
-            price: "$1.08",
-            change: "3.5%",
-            isPositive: true
-        },
-        {
-            name: "Avalanche",
-            logo: "AVAX.svg",
-            weight: "0.7%",
-            marketCap: "$20,512,577,287",
-            price: "$50.14",
-            change: "1.3%",
-            isPositive: true
-        },
-        {
-            name: "ChainLink",
-            logo: "LINK.svg",
-            weight: "0.6%",
-            marketCap: "$17,989,340,476",
-            price: "$28.70",
-            change: "-0.7%",
-            isPositive: false
-        },
-        {
-            name: "Sui",
-            logo: "SUI.svg",
-            weight: "0.4%",
-            marketCap: "$10,210,264,950",
-            price: "$3.39",
-            change: "-4.5%",
-            isPositive: false
-        },
-        {
-            name: "Polkadot",
-            logo: "DOT.svg",
-            weight: "0.5%",
-            marketCap: "$12,795,340,380",
-            price: "$8.89",
-            change: "6.1%",
-            isPositive: true
-        },
-        {
-            name: "Litecoin",
-            logo: "LTC.svg",
-            weight: "0.4%",
-            marketCap: "$9,844,658,957",
-            price: "$130.47",
-            change: "2.9%",
-            isPositive: true
-        }
-    ];
+interface Holding {
+    name: string;
+    logo: string;
+    weight: string;
+    marketCap: string;
+    price: string;
+    change: string;
+    isPositive: boolean;
+}
+
+interface FundHoldingsProps {
+    initialHoldings: Holding[];
+}
+
+export default function FundHoldings({ initialHoldings }: FundHoldingsProps) {
+    const [cryptoHoldings, setCryptoHoldings] = useState<Holding[]>(initialHoldings);
+
+    useEffect(() => {
+        const fetchCryptoData = async () => {
+            try {
+                const response = await fetch(
+                    'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,cardano,avalanche,chainlink,sui,polkadot,litecoin&vs_currencies=usd&include_market_cap=true&include_24hr_change=true'
+                );
+                const data = await response.json();
+
+                const cryptoMapping = {
+                    bitcoin: { name: "Bitcoin", logo: "BTC.svg", weight: "70.8%" },
+                    ethereum: { name: "Ethereum", logo: "ETH.svg", weight: "15.2%" },
+                    solana: { name: "Solana", logo: "SOL.svg", weight: "3.2%" },
+                    ripple: { name: "XRP", logo: "XRP.svg", weight: "2.4%" },
+                    cardano: { name: "Cardano", logo: "ADA.svg", weight: "2.1%" },
+                    avalanche: { name: "Avalanche", logo: "AVAX.svg", weight: "1.8%" },
+                    chainlink: { name: "Chainlink", logo: "LINK.svg", weight: "1.6%" },
+                    sui: { name: "Sui", logo: "SUI.svg", weight: "1.2%" },
+                    polkadot: { name: "Polkadot", logo: "DOT.svg", weight: "1.0%" },
+                    litecoin: { name: "Litecoin", logo: "LTC.svg", weight: "0.7%" }
+                };
+
+                interface CryptoValues {
+                    usd: number;
+                    usd_market_cap: number;
+                    usd_24h_change: number;
+                }
+
+                const updatedHoldings = Object.entries(data).map(([id, values]) => ({
+                    name: cryptoMapping[id as keyof typeof cryptoMapping].name,
+                    logo: cryptoMapping[id as keyof typeof cryptoMapping].logo,
+                    weight: cryptoMapping[id as keyof typeof cryptoMapping].weight,
+                    marketCap: `$${(values as CryptoValues).usd_market_cap.toLocaleString()}`,
+                    price: `$${(values as CryptoValues).usd.toLocaleString()}`,
+                    change: `${(values as CryptoValues).usd_24h_change.toFixed(1)}%`,
+                    isPositive: (values as CryptoValues).usd_24h_change > 0
+                }));
+
+                setCryptoHoldings(updatedHoldings);
+            } catch (error) {
+                console.error('Error fetching crypto data:', error);
+            }
+        };
+
+        fetchCryptoData();
+        const interval = setInterval(fetchCryptoData, 60000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <section className="py-24 bg-white dark:bg-black">
@@ -133,7 +104,7 @@ export default function FundHoldings() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                                    {holdings.map((holding, index) => (
+                                    {cryptoHoldings.map((holding: Holding, index: number) => (
                                         <motion.tr
                                             key={holding.name}
                                             initial={{ opacity: 0, y: 20 }}
@@ -144,8 +115,8 @@ export default function FundHoldings() {
                                         >
                                             <td className="px-6 py-4 whitespace-nowrap flex items-center">
                                                 <CryptoLogo
-                                                    symbol={holding.logo.replace('.svg', '')} // now using logoLink only
-                                                    name={holding.name}
+                                                    symbol={holding.logo.replace('.svg', '')}
+                                                    name={String(holding.name)}
                                                     className="mr-3"
                                                 />
                                                 <span className="font-medium text-gray-900 dark:text-gray-100">
@@ -175,3 +146,4 @@ export default function FundHoldings() {
         </section>
     );
 }
+
