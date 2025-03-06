@@ -38,9 +38,9 @@ export default function MediaContact() {
                 <hr className="border-t-2 border-stone-600 mb-6" />
                 <div className="flex space-x-6">
                     {[
-                        { icon: faLinkedin, href: "#" },
+
                         { icon: faTwitter, href: "#" },
-                        { icon: faFacebook, href: "#" },
+
                         { icon: faEnvelope, href: "mailto:support@fgpremiumfunds.com" }
                     ].map((social, index) => (
                         <motion.a

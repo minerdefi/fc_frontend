@@ -47,7 +47,7 @@ const VerifyEmailPage: React.FC = () => {
                 <Link href="/" className="inline-block mb-12">
                     <Image
                         src="/images/fc1.png"
-                        alt="Forbes Capital"
+                        alt="FG Premium"
                         width={100}
                         height={100}
                         className="mx-auto dark:invert transform hover:scale-105 transition-all duration-200"

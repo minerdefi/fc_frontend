@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Register - FG Premium Funds',
-    description: 'Create your FG Premium Funds account',
+    title: 'Register - FG Premium',
+    description: 'Create your FG Premium account',
 }
 
 export const viewport = {

@@ -15,8 +15,8 @@ export default function MarketStats() {
                     {[
                         { title: "MARKET PRICE*", value: "$65.71" },
                         { title: "INTRADAY NAV**", value: "$75.51" },
-                        { title: "AUM†", value: "$1.528B" },
-                        { title: "PRICE CHANGE TODAY", value: "$-0.04 / -0.06%" },
+                        { title: "AUM†", value: "$1.98B" },
+                        { title: "PRICE CHANGE TODAY", value: "0.9%" },
                         { title: "PREVIOUS DAY NAV‡", value: "$74.58" }
                     ].map((stat, index) => (
                         <motion.div
@@ -35,10 +35,38 @@ export default function MarketStats() {
                     ))}
                 </motion.div>
                 <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                    <p>* Market price as of December 13, 2024 9:00 PM GMT+1.</p>
-                    <p>** Intraday NAV as of December 13, 2024 10:00 PM GMT+1. Estimate calculated by FG each hour.</p>
-                    <p>† Estimated AUM as of December 13, 2024 10:45 PM GMT+1; non-GAAP, unaudited.</p>
-                    <p>‡ Estimated NAV per share as of December 12, 2024 10:00 PM GMT+1; non-GAAP, unaudited.</p>
+                    <p>* Market price as of {new Date().toLocaleDateString('en-GB', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })} {new Date().toLocaleTimeString('en-GB', {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })} GMT+1.</p>
+                    <p>** Intraday NAV as of {new Date().toLocaleDateString('en-GB', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })} {new Date().toLocaleTimeString('en-GB', {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })} GMT+1. Estimate calculated by FG each hour.</p>
+                    <p>† Estimated AUM as of {new Date().toLocaleDateString('en-GB', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })} {new Date().toLocaleTimeString('en-GB', {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })} GMT+1; non-GAAP, unaudited.</p>
+                    <p>‡ Estimated NAV per share as of {new Date().toLocaleDateString('en-GB', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })} {new Date().toLocaleTimeString('en-GB', {
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })} GMT+1; non-GAAP, unaudited.</p>
                 </div>
 
                 <p className="text-sm text-gray-500 mt-2">

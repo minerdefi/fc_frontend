@@ -1,16 +1,14 @@
 export default function FundDetails() {
     const details = [
-        { label: "Ticker", value: "FGW" },
-        { label: "Bloomberg", value: "FGW US" },
+        { label: "Ticker", value: "FGTX" },
         { label: "Benchmark Index", value: "FG 10 Large Cap Crypto Index" },
         { label: "Index Rebalancing", value: "Monthly" },
-        { label: "CUSIP", value: "091749101" },
-        { label: "ISIN", value: "US0917491013" },
-        { label: "Market", value: "OTCQX" },
-        { label: "Fund Type", value: "Crypto Index Fund" },
+        { label: "ISIN", value: "******491013" },
+        { label: "Market", value: "OTCQX,OTC" },
+        { label: "Fund Type", value: "Crypto Index Fund, Active Traded Fund" },
         { label: "Inception Date", value: "November 22, 2017" },
-        { label: "AUM", value: "$1.528B" },
-        { label: "Shares Outstanding", value: "20,241,947" }
+        { label: "AUM", value: "$1.98B" },
+        { label: "Shares Outstanding", value: "9,241,947" }
     ];
 
     return (

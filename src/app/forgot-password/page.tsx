@@ -59,7 +59,7 @@ export default function ForgotPasswordPage() {
                     <Link href="/">
                         <Image
                             src="/images/fc1.png"
-                            alt="Forbes Capital"
+                            alt="FG Premium"
                             width={100}
                             height={100}
                             className="mx-auto dark:invert"

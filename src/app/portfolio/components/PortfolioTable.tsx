@@ -123,19 +123,19 @@ export default function PortfolioTable() {
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Disclosure</h4>
                 <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
                     <p>
-                        <b className="font-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by FG Premium Funds and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results.
+                        <b className="font-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by FG Premium and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results.
                     </p>
                     <p>
-                        Exits include current and former FG Premium Funds portfolio companies which may have been acquired and/or where FG Premium Funds sold tokens and/or equity. Certain portfolio companies on this list may still be held in FG Premium Funds funds.
+                        Exits include current and former FG Premium portfolio companies which may have been acquired and/or where FG Premium sold tokens and/or equity. Certain portfolio companies on this list may still be held in FG Premium funds.
                     </p>
                     <p>
-                        A list of investments made by funds managed by FG Premium Funds is available here: <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">https://fgpremiumfunds.com/main/portfolio/</a>
+                        A list of investments made by funds managed by FG Premium is available here: <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">https://fgpremiumfunds.com/main/portfolio/</a>
                     </p>
                     <p>
                         Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure.
                     </p>
                     <p>
-                        Further, the list of investments is updated monthly and, as such, may not reflect the most recent FG Premium Funds investments. Past results of FG Premium Funds's investments, pooled investment vehicles, or investment strategies are not necessarily indicative of future results.
+                        Further, the list of investments is updated monthly and, as such, may not reflect the most recent FG Premium investments. Past results of FG Premium's investments, pooled investment vehicles, or investment strategies are not necessarily indicative of future results.
                     </p>
                     <p>
                         <b className="font-semibold">Market Data Disclosure:</b> All market data shown is as of December 13, 2024, unless otherwise noted. Past performance is not indicative of future results. Actual results may vary.

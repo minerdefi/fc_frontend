@@ -91,7 +91,7 @@ export default function PerformanceChart() {
                 <p className="text-sm text-gray-500 mt-4">
                     Past performance does not predict future results. The blue line shows the performance
                     of the Fund on a NAV per share basis, net of fees and expenses. The green line shows
-                    the last daily traded price for the shares on OTCQX.
+                    the last daily traded price for the shares.
                 </p>
             </div>
         </section>

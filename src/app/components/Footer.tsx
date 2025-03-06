@@ -15,7 +15,7 @@ export default function Footer() {
                         <Link href="/" className="flex items-center mb-4">
                             <Image
                                 src="/images/fc1.png"
-                                alt="FG Premium Funds"
+                                alt="FG Premium"
                                 width={40}
                                 height={40}
                                 className="dark:invert"
@@ -33,7 +33,7 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/about" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/team" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
                                     About Us
                                 </Link>
                             </li>
@@ -67,7 +67,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/contact" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
                                     Support
                                 </Link>
                             </li>
@@ -98,15 +98,10 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-base text-gray-500">
-                            © {new Date().getFullYear()} FG Premium Funds. All rights reserved.
+                            © {new Date().getFullYear()} FG Premium. All rights reserved.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
-                            <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">
-                                <FontAwesomeIcon icon={faTwitter} className="h-5 w-5" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">
-                                <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
-                            </a>
+
                             <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">
                                 <FontAwesomeIcon icon={faGithub} className="h-5 w-5" />
                             </a>

@@ -15,12 +15,6 @@ export default function MethodologySection() {
             title: "Senior Strategic Advisor",
             previous: "Previously Global Head of Index Business at Bloomberg LP. Before that, Managing Director and Global Head of Research & Design at Standard & Poor's.",
             image: "spencer-dash.png"
-        },
-        {
-            name: "Mike Hougan",
-            title: "Chief Investment Officer at FG Premium Funds",
-            previous: "Previously CEO at Inside ETFs, Managing Director of Global Finance at Informa. Before that, CEO of ETF.com.",
-            image: "mike-hougan.png"
         }
     ];
 

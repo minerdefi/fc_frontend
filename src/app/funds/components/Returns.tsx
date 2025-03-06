@@ -13,39 +13,39 @@ export default function Returns() {
 
     const returnsData: ReturnsData = {
         '1-month': {
-            'FG 10 Crypto Index Fund (NAV) *': '20.0%',
-            'Secondary Market Performance (OTCQX: FGW)': '38.3%',
-            'Bitwise 10 Large Cap Crypto Index **': '20.2%',
+            'FG 30 Crypto Index Fund (NAV) *': '20.0%',
+            'Secondary Market Performance (OTC: FGW)': '38.3%',
+            'FG 10 Large Cap Crypto Index **': '20.2%',
             'Bitcoin ***': '13.3%'
         },
         '3-months': {
-            'FG 10 Crypto Index Fund (NAV) *': '74.2%',
-            'Secondary Market Performance (OTCQX: FGW)': '139.3%',
-            'Bitwise 10 Large Cap Crypto Index **': '75.3%',
+            'FG 30 Crypto Index Fund (NAV) *': '74.2%',
+            'Secondary Market Performance (OTC: FGW)': '139.3%',
+            'FG 10 Large Cap Crypto Index **': '75.3%',
             'Bitcoin ***': '70.2%'
         },
         'ytd': {
-            'FG 10 Crypto Index Fund (NAV) *': '118.0%',
-            'Secondary Market Performance (OTCQX: FGW)': '183.8%',
-            'Bitwise 10 Large Cap Crypto Index **': '123.2%',
+            'FG 30 Crypto Index Fund (NAV) *': '118.0%',
+            'Secondary Market Performance (OTC: FGW)': '183.8%',
+            'FG 10 Large Cap Crypto Index **': '123.2%',
             'Bitcoin ***': '142.1%'
         },
         '12-months': {
-            'FG 10 Crypto Index Fund (NAV) *': '118.2%',
-            'Secondary Market Performance (OTCQX: FGW)': '179.6%',
-            'Bitwise 10 Large Cap Crypto Index **': '123.8%',
+            'FG 30 Crypto Index Fund (NAV) *': '118.2%',
+            'Secondary Market Performance (OTC: FGW)': '179.6%',
+            'FG 10 Large Cap Crypto Index **': '123.8%',
             'Bitcoin ***': '137.1%'
         },
         'since-inception': {
-            'FG 10 Crypto Index Fund (NAV) *': '655.1%',
-            'Secondary Market Performance (OTCQX: FGW)': 'N/A',
-            'Bitwise 10 Large Cap Crypto Index **': '780.0%',
+            'FG 30 Crypto Index Fund (NAV) *': '655.1%',
+            'Secondary Bonus Market Performance (OTC: FGW)': 'N/A',
+            'FG 10 Large Cap Crypto Index **': '780.0%',
             'Bitcoin ***': '1133.1%'
         },
-        'since-otcqx': {
-            'FG 10 Crypto Index Fund (NAV) *': '353.6%',
-            'Secondary Market Performance (OTCQX: FGW)': '119.4%',
-            'Bitwise 10 Large Cap Crypto Index **': '400.5%',
+        'since-otc': {
+            'FG 30 Crypto Index Fund (NAV) *': '353.6%',
+            'Secondary Market Performance (OTC: FGW)': '119.4%',
+            'FG 10 Large Cap Crypto Index **': '400.5%',
             'Bitcoin ***': '454.9%'
         }
     };
@@ -56,7 +56,7 @@ export default function Returns() {
         'ytd': 'YTD',
         '12-months': '12 Months',
         'since-inception': 'Since Inception †',
-        'since-otcqx': 'Since OTCQX Quotation ‡'
+        'since-otc': 'Since OTC Quotation ‡'
     };
 
     return (
@@ -72,7 +72,14 @@ export default function Returns() {
                         Returns
                     </h2>
                     <p className="text-xl mb-6 text-gray-600 dark:text-gray-300">
-                        As of: December 13, 2024 10:00 PM GMT+1
+                        As of: {new Date().toLocaleDateString('en-GB', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric'
+                        })} {new Date().toLocaleTimeString('en-GB', {
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        })} GMT+1
                     </p>
 
                     {/* Desktop View */}
@@ -147,7 +154,7 @@ export default function Returns() {
                         <p>** Performance of an index is not illustrative of any particular investment. It is not possible to invest directly in an index. Index performance does not include the fees and expenses that are charged by the Fund. Past performance is not indicative of future performance.</p>
                         <p>*** The returns of bitcoin (BTC) are historical and unaudited and do not represent the returns of an actual account. These historical returns do not include the fees and expenses that are charged by any Fund.</p>
                         <p>† FG 10 Crypto Index Fund inception date: November 22, 2017.</p>
-                        <p>‡ Inception of quotation on OTCQX: December 9, 2020.</p>
+                        <p>‡ Inception of quotation on OTC: December 9, 2020.</p>
                     </div>
                 </motion.div>
             </div>
