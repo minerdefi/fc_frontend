@@ -10,12 +10,12 @@ export default function BlogDisclosure() {
         >
             <div className="prose prose-gray dark:prose-invert max-w-none text-sm space-y-4">
                 <p className="titillium-web-extralight-italic">
-                    <b className="titillium-web-semibold">Disclosure:</b> Unless otherwise indicated, the views expressed in this post are solely those of the author(s) in their individual capacity and are not the views of FG Premium Funds Capital Management, LLC or its affiliates (together with its affiliates, &quot;FG Premium Funds&quot;).
+                    <b className="titillium-web-semibold">Disclosure:</b> Unless otherwise indicated, the views expressed in this post are solely those of the author(s) in their individual capacity and are not the views of FG Premium Capital Management, LLC or its affiliates (together with its affiliates, &quot;FG Premium&quot;).
                 </p>
                 <p className="titillium-web-extralight-italic">
-                    A list of investments made by funds managed by FG Premium Funds is available here: {' '}
-                    <a href="https://forbespartners.org/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">
-                        https://forbespartners.org/main/portfolio/
+                    A list of investments made by funds managed by FG Premium is available here: {' '}
+                    <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">
+                        https://fgpremiumfunds.com/main/portfolio/
                     </a>
                 </p>
                 <p className="text-sm text-gray-500">
