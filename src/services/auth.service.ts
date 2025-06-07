@@ -2,7 +2,7 @@ import { RegisterData, AuthResponse } from '@/types/auth';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 // Use fallback URL if NEXT_PUBLIC_API_URL is undefined
-const BASE_URL = isDevelopment ? 'https://minerdefi.pythonanywhere.com' : (process.env.NEXT_PUBLIC_API_URL || 'https://minerdefi.pythonanywhere.com');
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://your-render-app-name.onrender.com';
 
 class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {

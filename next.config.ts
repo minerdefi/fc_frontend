@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: [
           { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: 'https://minerdefi.pythonanywhere.com' },
+          { key: 'Access-Control-Allow-Origin', value: process.env.NEXT_PUBLIC_API_URL || 'https://your-render-app-name.onrender.com' },
           { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
           { key: 'Access-Control-Allow-Headers', value: 'Accept, Accept-Version, Content-Length, Content-Type, Date' },
         ]
@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['127.0.0.1', 'localhost', 'minerdefi.pythonanywhere.com'],
+    domains: ['127.0.0.1', 'localhost', process.env.NEXT_PUBLIC_API_URL?.replace('https://', '') || 'your-render-app-name.onrender.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,

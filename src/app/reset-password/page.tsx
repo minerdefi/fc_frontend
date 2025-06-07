@@ -1,5 +1,6 @@
 'use client';
 
+import { apiRequest } from '@/utils/api';
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -29,10 +30,8 @@ export default function ResetPasswordPage() {
             setMessage({ type: 'error', text: 'Passwords do not match' });
             setIsLoading(false);
             return;
-        }
-
-        try {
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/reset-password/', {
+        } try {
+            const response = await apiRequest('/auth/reset-password/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ token, password }),

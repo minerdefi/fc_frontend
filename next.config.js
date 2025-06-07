@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    reactStrictMode: true,
     images: {
         remotePatterns: [
             {
@@ -16,7 +17,14 @@ const nextConfig = {
         dangerouslyAllowSVG: true,
         contentDispositionType: 'attachment',
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-        domains: ['127.0.0.1', 'localhost'],
+        domains: [
+            '127.0.0.1',
+            'localhost',
+            'raw.githubusercontent.com',
+            'assets.coingecko.com',
+            'tokens.1inch.io',
+            'static.alchemyapi.io',
+        ],
     },
     async rewrites() {
         return [

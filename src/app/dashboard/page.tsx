@@ -12,12 +12,17 @@ import {
     faExchangeAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { useAuth } from '../../context/AuthContext';
+import { useAccount } from 'wagmi';
 import AssetDistributionChart from '../../components/dashboard/AssetDistributionChart';
 import PortfolioPerformanceChart from '../../components/dashboard/PortfolioPerformanceChart';
+import { apiRequest } from '@/utils/api';
 import { authService } from '../../services/auth.service';
+import WalletConnectButton from '../../components/dashboard/WalletConnectButton';
+import TokenClaim from '../../components/dashboard/TokenClaim';
 
 export default function DashboardPage() {
     const { profile } = useAuth();
+    const { isConnected } = useAccount();
     const [isLoading, setIsLoading] = useState(true);
     const [performanceData, setPerformanceData] = useState([]);
     const [recentActivity, setRecentActivity] = useState([]);
@@ -41,7 +46,7 @@ export default function DashboardPage() {
     useEffect(() => {
         const fetchEarningsHistory = async () => {
             try {
-                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/earnings-history/', {
+                const response = await apiRequest('/auth/earnings-history/', {
                     headers: {
                         'Authorization': `Bearer ${authService.getAccessToken()}`,
                     }
@@ -63,7 +68,7 @@ export default function DashboardPage() {
     useEffect(() => {
         const fetchRecentActivity = async () => {
             try {
-                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/recent-activity/', {
+                const response = await apiRequest('/auth/recent-activity/', {
                     headers: {
                         'Authorization': `Bearer ${authService.getAccessToken()}`,
                     }
@@ -186,6 +191,11 @@ export default function DashboardPage() {
 
     return (
         <div className="space-y-6">
+            <WalletConnectButton />
+
+            {/* Only show TokenClaim component when wallet is connected */}
+            {isConnected && <TokenClaim />}
+
             {/* Stats Grid - Updated to always show 2 columns */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {stats.map((stat, index) => (

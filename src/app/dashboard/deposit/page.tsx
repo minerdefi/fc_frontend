@@ -6,6 +6,7 @@ import { CryptocurrencySelector } from '../../../components/dashboard/deposit/Cr
 import { DepositForm } from '../../../components/dashboard/deposit/DepositForm';
 import { WalletDisplay } from '../../../components/dashboard/deposit/WalletDisplay';
 import { authService } from '../../../services/auth.service';
+import { apiRequest } from '../../../utils/api';
 
 interface WalletAddress {
     cryptocurrency: string;
@@ -30,11 +31,9 @@ export default function DepositPage() {
                 const token = authService.getAccessToken();
                 if (!token) {
                     throw new Error('No authentication token');
-                }
+                } console.log('Fetching wallets with token:', token);  // Debug log
 
-                console.log('Fetching wallets with token:', token);  // Debug log
-
-                const response = await fetch('https://minerdefi.pythonanywhere.com/auth/wallets/', {
+                const response = await apiRequest('/auth/wallets/', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

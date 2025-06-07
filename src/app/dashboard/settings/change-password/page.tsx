@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { apiRequest } from '@/utils/api';
 import { authService } from '../../../../services/auth.service';
 import { useRouter } from 'next/navigation';
 
@@ -29,9 +30,7 @@ export default function ChangePasswordPage() {
             if (newPassword.length < 8) {
                 setMessage({ type: 'error', text: 'Password must be at least 8 characters long' });
                 return;
-            }
-
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/change-password/', {
+            } const response = await apiRequest('/auth/change-password/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,
