@@ -1,4 +1,5 @@
 "use client";
+import { getApiUrl } from '@/utils/api';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -39,7 +40,7 @@ export default function ContactForm() {
 
         try {
             const response = await axios.post(
-                'https://minerdefi.pythonanywhere.com/api/contact/submit/',  // Updated endpoint
+                getApiUrl('/api/contact/submit/'),
                 formData
             );
 

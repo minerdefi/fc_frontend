@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { authService } from '../services/auth.service';
+import { apiRequest } from '../utils/api';
 
 interface User {
     username: string;
@@ -119,14 +120,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
                 window.location.href = '/login';
             }
         }
-    };
-
-    const refreshProfile = async () => {
+    }; const refreshProfile = async () => {
         try {
             const token = authService.getAccessToken();
             if (!token) return;
 
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/profile/', {
+            const response = await apiRequest('/auth/profile/', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 }

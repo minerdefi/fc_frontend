@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { apiRequest } from '@/utils/api';
 import { authService } from '../../../../services/auth.service';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../../../context/AuthContext';
@@ -17,9 +18,8 @@ export default function TransactionPinPage() {
 
     const handleRequestOTP = async () => {
         setError(null);
-        setIsLoading(true);
-        try {
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/transaction-pin/request-otp/', {
+        setIsLoading(true); try {
+            const response = await apiRequest('/auth/transaction-pin/request-otp/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,
@@ -42,10 +42,8 @@ export default function TransactionPinPage() {
     const handleSetPin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
-        setIsLoading(true);
-
-        try {
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/transaction-pin/set/', {
+        setIsLoading(true); try {
+            const response = await apiRequest('/auth/transaction-pin/set/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,

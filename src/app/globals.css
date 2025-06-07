@@ -174,3 +174,36 @@ html {
 @layer utilities {
   /* Remove aspect ratio utilities */
 }
+
+/* Add custom breakpoint for extra small screens */
+@layer components {
+  @media (min-width: 480px) {
+    .xs\:flex-row {
+      flex-direction: row;
+    }
+
+    .xs\:flex-auto {
+      flex: 0 1 auto;
+    }
+
+    .xs\:w-auto {
+      width: auto;
+    }
+
+    .xs\:w-full {
+      width: 100%;
+    }
+
+    .xs\:items-center {
+      align-items: center;
+    }
+
+    .xs\:justify-start {
+      justify-content: flex-start;
+    }
+
+    .xs\:mt-0 {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { apiRequest } from '@/utils/api';
 import { useAuth } from '../../../context/AuthContext';
 import Link from 'next/link';
 
@@ -12,11 +13,9 @@ export default function SettingsPage() {
     const handleUpdateProfile = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
-        setMessage(null);
-
-        const formData = new FormData(e.currentTarget);
+        setMessage(null); const formData = new FormData(e.currentTarget);
         try {
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/profile/update/', {
+            const response = await apiRequest('/auth/profile/update/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

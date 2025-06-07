@@ -1,5 +1,6 @@
 'use client';
 
+import { apiRequest } from '@/utils/api';
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -13,10 +14,8 @@ export default function ForgotPasswordPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
-        setMessage(null);
-
-        try {
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/forgot-password/', {
+        setMessage(null); try {
+            const response = await apiRequest('/auth/forgot-password/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

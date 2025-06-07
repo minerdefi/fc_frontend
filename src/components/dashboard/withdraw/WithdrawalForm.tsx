@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { authService } from '../../../services/auth.service';
+import { apiRequest } from '../../../utils/api';
 
 const PAYMENT_METHODS = [
     { value: 'BTC', label: 'Bitcoin (BTC)' },
@@ -62,9 +63,7 @@ export function WithdrawalForm({ availableBalance, onSuccess }: WithdrawalFormPr
             const token = authService.getAccessToken();
             if (!token) {
                 throw new Error('Authentication required');
-            }
-
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/withdrawals/create/', {
+            } const response = await apiRequest('/auth/withdrawals/create/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

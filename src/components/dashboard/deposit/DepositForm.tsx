@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { apiRequest } from '../../../utils/api';
 import { authService } from '../../../services/auth.service';
 import Loader from '../../common/Loader';
 
@@ -39,9 +40,7 @@ export function DepositForm({ selectedCrypto, minimumDeposit }: DepositFormProps
             const token = authService.getAccessToken();
             if (!token) {
                 throw new Error('Authentication required');
-            }
-
-            const response = await fetch('https://minerdefi.pythonanywhere.com/auth/deposits/create/', {
+            } const response = await apiRequest('/auth/deposits/create/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

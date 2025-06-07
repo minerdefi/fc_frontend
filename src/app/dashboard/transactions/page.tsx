@@ -13,6 +13,7 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { useAuth } from '../../../context/AuthContext';
+import { apiRequest } from '@/utils/api';
 import { authService } from '../../../services/auth.service';
 
 interface Transaction {
@@ -28,11 +29,9 @@ export default function TransactionsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
-    const { profile } = useAuth();
-
-    const fetchTransactions = async (page: number) => {
+    const { profile } = useAuth(); const fetchTransactions = async (page: number) => {
         try {
-            const response = await fetch(`https://minerdefi.pythonanywhere.com/auth/transactions/?page=${page}`, {
+            const response = await apiRequest(`/auth/transactions/?page=${page}`, {
                 headers: {
                     'Authorization': `Bearer ${authService.getAccessToken()}`,
                 }
@@ -106,10 +105,10 @@ export default function TransactionsPage() {
                                 </span>
                             </div>
                             <span className={`px-2 inline-flex text-xs font-semibold rounded-full ${transaction.status === 'completed'
-                                    ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
-                                    : transaction.status === 'pending'
-                                        ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
-                                        : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
+                                ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
+                                : transaction.status === 'pending'
+                                    ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
+                                    : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
                                 }`}>
                                 {transaction.status.toUpperCase()}
                             </span>
@@ -160,10 +159,10 @@ export default function TransactionsPage() {
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${transaction.status === 'completed'
-                                                ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
-                                                : transaction.status === 'pending'
-                                                    ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
-                                                    : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
+                                            ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
+                                            : transaction.status === 'pending'
+                                                ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
+                                                : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
                                             }`}>
                                             {transaction.status.toUpperCase()}
                                         </span>
