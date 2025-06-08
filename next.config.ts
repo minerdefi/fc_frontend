@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['127.0.0.1', 'localhost', process.env.NEXT_PUBLIC_API_URL?.replace('https://', '') || 'your-render-app-name.onrender.com'],
+    domains: ['127.0.0.1', 'localhost', 'fgpremium.pythonanywhere.com', process.env.NEXT_PUBLIC_API_URL?.replace('https://', '') || 'fgpremium.pythonanywhere.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,

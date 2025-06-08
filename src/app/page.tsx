@@ -14,7 +14,7 @@ export default function Home() {
 
     // Fetch message from Django backend
     console.log("Fetching message from backend...");
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://fgpremium.pythonanywhere.com";
     fetch(`${apiUrl}/api/home/`)
       .then((response) => {
         console.log("Response received:", response);

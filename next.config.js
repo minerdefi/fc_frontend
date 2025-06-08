@@ -25,12 +25,11 @@ const nextConfig = {
             'tokens.1inch.io',
             'static.alchemyapi.io',
         ],
-    },
-    async rewrites() {
+    },    async rewrites() {
         return [
             {
                 source: '/api/:path*',
-                destination: 'http://127.0.0.1:8000/:path*'
+                destination: 'https://fgpremium.pythonanywhere.com/:path*'
             }
         ]
     }
