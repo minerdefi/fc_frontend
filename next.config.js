@@ -24,12 +24,11 @@ const nextConfig = {
             'assets.coingecko.com',
             'tokens.1inch.io',
             'static.alchemyapi.io',
-        ],
-    },    async rewrites() {
+        ],    }, async rewrites() {
         return [
             {
                 source: '/api/:path*',
-                destination: 'https://fgpremium.pythonanywhere.com/:path*'
+                destination: 'https://api.fgpremiumfunds.com/:path*'
             }
         ]
     }
