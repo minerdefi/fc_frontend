@@ -10,11 +10,9 @@ export default function Home() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    setIsClient(true);
-
-    // Fetch message from Django backend
+    setIsClient(true);    // Fetch message from Django backend
     console.log("Fetching message from backend...");
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://fgpremium.pythonanywhere.com";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.fgpremiumfunds.com";
     fetch(`${apiUrl}/api/home/`)
       .then((response) => {
         console.log("Response received:", response);
