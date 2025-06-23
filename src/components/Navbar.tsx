@@ -38,6 +38,12 @@ const Navbar = () => {
                         >
                             Home
                         </Link>
+                        <Link
+                            href="/analytics"
+                            className="text-gray-700 dark:text-gray-300 hover:text-[#308e87] px-3 py-2 rounded-md text-sm font-medium"
+                        >
+                            Analytics
+                        </Link>
                     </div>
                 </div>
             </div>
