@@ -49,6 +49,7 @@ export default function Navbar() {
         { name: 'Home', href: '/' },
         { name: 'Portfolio', href: '/portfolio' },
         { name: 'Funds', href: '/funds' },
+        { name: 'OWNB', href: '/analytics' },
         { name: 'Team', href: '/team' },
         { name: 'Contact', href: '/contact' },
         // Methodology item removed
@@ -74,6 +75,9 @@ export default function Navbar() {
                     </Link>
                     <Link href="/funds" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
                         Funds
+                    </Link>
+                    <Link  href="/analytics" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                        OWNB
                     </Link>
                     <Link href="/portfolio" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
                         Portfolio
