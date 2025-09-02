@@ -28,7 +28,9 @@ const nextConfig = {
         return [
             {
                 source: '/api/:path*',
-                destination: 'https://api.fgpremiumfunds.com/:path*'
+                destination: process.env.NEXT_PUBLIC_API_URL
+                    ? `${process.env.NEXT_PUBLIC_API_URL}/:path*`
+                    : 'https://api.fgpremiumfunds.com/:path*'
             }
         ]
     }
