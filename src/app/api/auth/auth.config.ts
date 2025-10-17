@@ -16,7 +16,7 @@ export const authOptions: NextAuthOptions = {
                 }
 
                 try {
-                    const response = await fetch('https://minerdefi.pythonanywhere.com/api/auth/login', {
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.fgpremiumfunds.com'}/auth/login/`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
