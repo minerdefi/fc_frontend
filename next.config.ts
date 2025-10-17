@@ -1,19 +1,6 @@
 import { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: process.env.NEXT_PUBLIC_API_URL || 'https://your-render-app-name.onrender.com' },
-          { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
-          { key: 'Access-Control-Allow-Headers', value: 'Accept, Accept-Version, Content-Length, Content-Type, Date' },
-        ]
-      }
-    ]
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'forbes-partners.com', pathname: '/wp-content/uploads/**' },
@@ -22,7 +9,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['127.0.0.1', 'localhost', 'api.fgpremiumfunds.com', process.env.NEXT_PUBLIC_API_URL?.replace('https://', '') || 'api.fgpremiumfunds.com'],
+    domains: ['127.0.0.1', 'localhost', 'api.fgpremiumfunds.com', 'raw.githubusercontent.com', 'assets.coingecko.com', 'tokens.1inch.io', 'static.alchemyapi.io'],
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -31,9 +18,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: process.env.NEXT_PUBLIC_API_URL
-          ? `${process.env.NEXT_PUBLIC_API_URL}/:path*`
-          : '/api/:path*'
+        destination: `${process.env.NEXT_PUBLIC_API_URL || 'https://api.fgpremiumfunds.com'}/:path*`
       }
     ]
   }
