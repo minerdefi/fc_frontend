@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['127.0.0.1', 'localhost', 'api.fgpremiumfunds.com', 'raw.githubusercontent.com', 'assets.coingecko.com', 'tokens.1inch.io', 'static.alchemyapi.io'],
+    domains: ['127.0.0.1', 'localhost', 'api.fgpremiumfunds.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,
