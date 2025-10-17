@@ -40,7 +40,7 @@ const authOptions: NextAuthOptions = {
             },
             async authorize(credentials): Promise<UserData | null> {
                 try {
-                    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.fgpremiumfunds.com'}/auth/login/`, {
+                    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://minerdefi.pythonanywhere.com'}/auth/login/`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

@@ -1,10 +1,5 @@
 export const getApiUrl = (endpoint: string): string => {
-    // On the client, use Next.js rewrite proxy to avoid CORS issues
-    if (typeof window !== 'undefined') {
-        return `/api${endpoint}`;
-    }
-
-    // On the server (SSR/build), use the configured base URL
+    // Always use direct API calls (Vercel doesn't support external URL rewrites)
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://api.fgpremiumfunds.com';
     return `${baseUrl}${endpoint}`;
 };
