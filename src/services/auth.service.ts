@@ -1,13 +1,12 @@
 import { RegisterData, AuthResponse } from '@/types/auth';
+import { getApiUrl } from '@/utils/api';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-// Use fallback URL if NEXT_PUBLIC_API_URL is undefined
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.fgpremiumfunds.com';
 
 class AuthService {
     async register(data: RegisterData): Promise<AuthResponse> {
         try {
-            const response = await fetch(`${BASE_URL}/auth/register/`, {
+            const response = await fetch(getApiUrl('/auth/register/'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +67,7 @@ class AuthService {
 
     async verifyEmail(token: string): Promise<void> {
         try {
-            const response = await fetch(`${BASE_URL}/auth/verify-email/?token=${token}`, {
+            const response = await fetch(getApiUrl(`/auth/verify-email/?token=${token}`), {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
@@ -90,8 +89,8 @@ class AuthService {
 
     async login(credentials: { login: string; password: string }) {
         try {
-            console.log('AuthService: Starting login request to:', `${BASE_URL}/auth/login/`);
-            const response = await fetch(`${BASE_URL}/auth/login/`, {
+            console.log('AuthService: Starting login request to:', getApiUrl('/auth/login/'));
+            const response = await fetch(getApiUrl('/auth/login/'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -132,7 +131,7 @@ class AuthService {
                 return null;
             }
 
-            const response = await fetch(`${BASE_URL}/auth/profile/`, {
+            const response = await fetch(getApiUrl('/auth/profile/'), {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
