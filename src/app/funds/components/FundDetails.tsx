@@ -1,11 +1,11 @@
 export default function FundDetails() {
     const details = [
         { label: "Ticker", value: "FGTX" },
-        { label: "Benchmark Index", value: "FG 10 Large Cap Crypto Index" },
+        { label: "Benchmark Index", value: "FG 10 Large Cap Blockchain Index" },
         { label: "Index Rebalancing", value: "Monthly" },
         { label: "ISIN", value: "******491013" },
         { label: "Market", value: "OTCQX,OTC" },
-        { label: "Fund Type", value: "Crypto Index Fund, Active Traded Fund" },
+        { label: "Fund Type", value: "Blockchain Index Fund, Active Traded Fund" },
         { label: "Inception Date", value: "November 22, 2017" },
         { label: "AUM", value: "$1.98B" },
         { label: "Shares Outstanding", value: "9,241,947" }

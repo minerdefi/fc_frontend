@@ -32,7 +32,7 @@ export default function KeyFacts() {
                         </div>
                         <div className="flex flex-col">
                             <h5 className="text-xl font-semibold">Asset Class</h5>
-                            <p className="text-xl">Crypto Assets</p>
+                            <p className="text-xl">Digital Assets</p>
                             <hr className="border text-gray-600 md:hidden" />
                         </div>
                         <div className="flex flex-col">

@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TeamMemberType } from '../data/teamData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faChevronUp, faChevronDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 interface TeamMemberProps {
@@ -25,19 +25,21 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
         >
             <div className="bg-white/80 dark:bg-gray-800/80 rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <div className="p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-start">
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                        className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-xl overflow-hidden shadow-2xl mx-auto lg:mx-0"
-                    >
-                        <Image
-                            src={member.image}
-                            alt={member.name}
-                            fill
-                            className="object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                            sizes="(max-width: 768px) 192px, 256px"
-                        />
-                    </motion.div>
+                    {member.image && (
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.3 }}
+                            className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-xl overflow-hidden shadow-2xl mx-auto lg:mx-0"
+                        >
+                            <Image
+                                src={member.image}
+                                alt={member.name}
+                                fill
+                                className="object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                                sizes="(max-width: 768px) 192px, 256px"
+                            />
+                        </motion.div>
+                    )}
 
                     <div className="flex-1 space-y-6">
                         <div>
@@ -62,8 +64,8 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
                                     whileHover={{ scale: 1.1, y: -2 }}
                                     whileTap={{ scale: 0.95 }}
                                     href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    target={platform === 'email' ? undefined : "_blank"}
+                                    rel={platform === 'email' ? undefined : "noopener noreferrer"}
                                     className="text-gray-400 hover:text-[#308e87] transition-colors"
                                 >
                                     <FontAwesomeIcon
@@ -71,7 +73,9 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
                                             platform === 'twitter' ? faTwitter :
                                                 platform === 'linkedin' ? faLinkedin :
                                                     platform === 'github' ? faGithub :
-                                                        faInstagram
+                                                        platform === 'instagram' ? faInstagram :
+                                                            platform === 'facebook' ? faFacebook :
+                                                                faEnvelope
                                         }
                                         className="text-2xl"
                                     />

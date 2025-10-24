@@ -4,27 +4,36 @@ import { apiRequest } from '@/utils/api';
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { useAuth } from '../../context/AuthContext';
 
 export default function ResetPasswordPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
-
+    const [isLoading, setIsLoading] = useState(false);
+    const { isAuthenticated, isLoading: isAuthLoading } = useAuth();
     const token = searchParams?.get('token');
 
     useEffect(() => {
+        // Check authentication status first
+        if (!isAuthLoading && isAuthenticated) {
+            console.log('User already authenticated, redirecting to dashboard');
+            router.push('/dashboard');
+            return;
+        }
+
+        // Check if token exists
         if (!token) {
             router.push('/login');
         }
-    }, [token, router]);
+    }, [isAuthenticated, isAuthLoading, router, token]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
         setMessage(null);
+        setIsLoading(true);
 
         if (password !== confirmPassword) {
             setMessage({ type: 'error', text: 'Passwords do not match' });
@@ -57,7 +66,13 @@ export default function ResetPasswordPage() {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-md w-full space-y-8">
+            {/* Show loading spinner while checking authentication */}
+            {isAuthLoading ? (
+                <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                </div>
+            ) : (
+                <div className="max-w-md w-full space-y-8">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                         Reset Password
@@ -120,7 +135,8 @@ export default function ResetPasswordPage() {
                         </button>
                     </div>
                 </form>
-            </div>
+                </div>
+            )}
         </div>
     );
 }

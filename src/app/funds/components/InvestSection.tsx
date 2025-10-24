@@ -16,12 +16,12 @@ export default function InvestSection() {
                         Start your journey in F&G Premium Fund today
                     </h2>
                     <p className="text-lg md:text-xl mb-8 text-white dark:text-gray-300">
-                        The FG 10 Crypto Index Fund is a smart and convenient way to invest in the cryptocurrency market. It currently has a $300,000 minimum investment.
+                        The FG 10 Blockchain Index Fund is a smart and convenient way to invest in the cryptocurrency market. It currently has a $300,000 minimum investment.
                     </p>
                     <motion.a
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        href="/register"
+                        href="/dashboard"
                         className="inline-flex items-center px-8 py-3 rounded-full border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white dark:text-[#308e87] dark:hover:text-white transition-all duration-300 font-semibold group"
                     >
                         Invest Now

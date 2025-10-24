@@ -24,16 +24,16 @@ export default function OurFirm() {
                             </motion.h2>
                             <div className="space-y-4 text-gray-600 dark:text-gray-300">
                                 <p className="mb-4">
-                                    FG Premium is a thesis-driven high performance fund created to deliver more advanced products and value to business, premuim and partner customers of the broader firm  that invests in cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and several venture funds, investing across both public and private markets.
+                                    FG Premium is a thesis-driven high performance fund created to deliver more advanced products and value to business, premuim and partner customers of the broader firm  that invests in digital assets, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and several venture funds, investing across both public and private markets.
                                 </p>
                                 <p className="mb-4">
-                                    Since founding the firm in May 2017, we've developed a reputation for being forward-leaning, independent thinkers. We are known for pioneering token economic models, valuation methodologies, and challenging long-standing assumptions that the crypto ecosystem takes for granted.
+                                    Since founding the firm in May 2017, we've developed a reputation for being forward-leaning, independent thinkers. We are known for pioneering token economic models, valuation methodologies, and challenging long-standing assumptions that the digital asset ecosystem takes for granted.
                                 </p>
                                 <p className="mb-4">
-                                    Crypto is the first inherently global asset class, and the team covers activity around the world.
+                                    Digital assets is the first inherently global asset class, and the team covers activity around the world.
                                 </p>
                                 <p className="mb-4">
-                                    As a crypto-native fund, we actively engage and participate in the networks we invest in. Moreover, we are intimately familiar with the crypto technology landscape and market structure. We are hands-on investors and will do everything in our power to maximize the success of our portfolio companies.
+                                    As a digital asset-native fund, we actively engage and participate in the networks we invest in. Moreover, we are intimately familiar with the crypto technology landscape and market structure. We are hands-on investors and will do everything in our power to maximize the success of our portfolio companies.
                                 </p>
                                 <p className="mb-4">
                                     Today, we manage long-duration capital on behalf of storied venture capital funds, family offices, institutions, and high net-worth individuals.

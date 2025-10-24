@@ -15,30 +15,37 @@ const LoginPage = () => {
         password: '',
     });
     const [errors, setErrors] = useState<Record<string, string>>({});
-    const [isLoading, setIsLoading] = useState(false);
+    const [isFormLoading, setIsFormLoading] = useState(false);
     const [apiError, setApiError] = useState<string | null>(null);
     const [showRegistrationMessage, setShowRegistrationMessage] = useState(false);
-    const { login } = useAuth();
+    const { login, isAuthenticated, isLoading } = useAuth();
 
     // Add theme transition hook
     useThemeTransition();
 
     useEffect(() => {
-        // Only handle registration message
+        // Check if user is already authenticated and redirect to dashboard
+        if (!isLoading && isAuthenticated) {
+            console.log('User already authenticated, redirecting to dashboard');
+            router.push('/dashboard');
+            return;
+        }
+
+        // Only handle registration message if not authenticated
         const searchParams = new URLSearchParams(window.location.search);
         if (searchParams.get('registered') === 'true') {
             setShowRegistrationMessage(true);
         }
-    }, []);
+    }, [isAuthenticated, isLoading, router]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setApiError(null);
         setErrors({});
-        setIsLoading(true);
+        setIsFormLoading(true);
 
         try {
-            console.log('Login: Attempting login with:', formData);
+            
             await login(formData.login, formData.password);
         } catch (error: any) {
             console.error('Login page error:', error);
@@ -46,7 +53,7 @@ const LoginPage = () => {
                 error.message ||
                 'Login failed. Please check your credentials and try again.'
             );
-            setIsLoading(false);
+            setIsFormLoading(false);
         }
     };
 
@@ -59,11 +66,17 @@ const LoginPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black flex items-center justify-center p-4">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="w-full max-w-md"
-            >
+            {/* Show loading spinner while checking authentication */}
+            {isLoading ? (
+                <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                </div>
+            ) : (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="w-full max-w-md"
+                >
                 <div className="text-center mb-8">
                     <Link href="/">
                         <Image
@@ -142,12 +155,12 @@ const LoginPage = () => {
 
                             <button
                                 type="submit"
-                                disabled={isLoading}
+                                disabled={isFormLoading}
                                 className="relative w-full inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
                             >
                                 <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
                                 <span className="relative">
-                                    {isLoading ? 'Signing in...' : 'Sign In'}
+                                    {isFormLoading ? 'Signing in...' : 'Sign In'}
                                 </span>
                             </button>
 
@@ -170,6 +183,7 @@ const LoginPage = () => {
                     </motion.div>
                 </div>
             </motion.div>
+            )}
         </div>
     );
 };

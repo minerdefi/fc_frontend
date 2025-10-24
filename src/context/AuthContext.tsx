@@ -33,6 +33,7 @@ interface ProfileData {
 
 interface AuthContextType {
     isAuthenticated: boolean;
+    isLoading: boolean; // Add loading state
     checkAuth: () => Promise<boolean>; // changed from () => boolean
     logout: () => void;
     login: (username: string, password: string) => Promise<void>;
@@ -45,6 +46,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isLoading, setIsLoading] = useState(true); // Add loading state
     const [user, setUser] = useState<User | null>(null);
     const [profile, setProfile] = useState<ProfileData | null>(null);
     const router = useRouter();
@@ -96,9 +98,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     const fetchProfile = async () => {
         try {
+            setIsLoading(true); // Set loading to true when starting
             if (!authService.getAccessToken()) {
                 setIsAuthenticated(false);
                 setProfile(null);
+                setIsLoading(false); // Set loading to false when done
                 return;
             }
 
@@ -119,6 +123,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             if (error instanceof Error && error.message.includes('401')) {
                 window.location.href = '/login';
             }
+        } finally {
+            setIsLoading(false); // Always set loading to false
         }
     }; const refreshProfile = async () => {
         try {
@@ -147,7 +153,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, checkAuth, logout, login, user, profile, refreshProfile }}>
+        <AuthContext.Provider value={{ isAuthenticated, isLoading, checkAuth, logout, login, user, profile, refreshProfile }}>
             {children}
         </AuthContext.Provider>
     );

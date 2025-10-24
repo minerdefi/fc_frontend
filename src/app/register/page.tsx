@@ -7,16 +7,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { authService } from '../../services/auth.service';
+import { useAuth } from '../../context/AuthContext';
 
 const RegisterPage = () => {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const { isAuthenticated, isLoading: isAuthLoading } = useAuth();
+    const router = useRouter();
 
     useEffect(() => {
         setMounted(true);
-    }, []);
 
-    const router = useRouter();
+        // Check if user is already authenticated and redirect to dashboard
+        if (!isAuthLoading && isAuthenticated) {
+            console.log('User already authenticated, redirecting to dashboard');
+            router.push('/dashboard');
+            return;
+        }
+    }, [isAuthenticated, isAuthLoading, router]);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -105,6 +113,13 @@ const RegisterPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black relative">
+            {/* Show loading spinner while checking authentication */}
+            {isAuthLoading ? (
+                <div className="flex items-center justify-center min-h-screen">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                </div>
+            ) : (
+                <>
             {/* Theme Toggle Button */}
             <div className="absolute top-4 right-4 z-50">
                 <button
@@ -389,6 +404,8 @@ const RegisterPage = () => {
                     </motion.div>
                 </div>
             </div>
+                </>
+            )}
         </div>
     );
 };

@@ -19,21 +19,22 @@ export default function HeroSection() {
                         transition={{ delay: 0.2 }}
                         className="text-base sm:text-lg mb-2 font-semibold text-[#308e87]"
                     >
-                        Pseudo Publicly Traded
+                        Private Offering
                     </motion.h6>
                     <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-snug lg:leading-snug text-gray-100 mt-2">
-                        FG Premium 10 Crypto Index Fund
+                        FG Premium 10 Blockchain Index Fund
                     </h1>
                     <div className="mt-4">
                         <p className="text-xl font-light text-gray-300">
-                            A secure way to get diversified exposure to bitcoin and leading cryptocurrencies. The Fund seeks to track an Index comprised of the 10 most highly valued cryptocurrencies, screened and monitored for certain risks, weighted by market capitalization, and rebalanced monthly. The fund provides the security and simplicity of a traditional investment vehicle, with shares traded in blockchain brokerage accounts using ticker "FGTX."
+                            A secure way to get diversified exposure to digital assets and leading blockchain technologies. The Fund seeks to track an Index comprised of the 10 most highly valued blockchain technologies, screened and monitored for certain risks, weighted by market capitalization, and re-balanced monthly. The fund provides the security and simplicity of a traditional investment vehicle, with shares traded in blockchain brokerage accounts using
+ticker "FGTX."
                         </p>
                     </div>
                     <div className="mt-6">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="/register"
+                            href="/dashboard"
                             className="inline-block bg-white text-black dark:bg-white dark:text-black font-medium py-3 px-6 rounded-full hover:bg-opacity-90 transition-all"
                         >
                             Invest Now
