@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import PageLayout from "./components/PageLayout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -46,7 +47,7 @@ export default function Home() {
               THESIS
             </span>
             <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:leading-snug lg:leading-snug mb-6">
-              Crypto will create the largest one-time shift in wealth in the history of the internet
+              Digital assets will create the largest one-time shift in wealth in the history of the internet.
             </h1>
             <div className="flex flex-col items-center mt-8">
               <Link
@@ -56,6 +57,15 @@ export default function Home() {
                 <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
                 <span className="relative">Get Started</span>
               </Link>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Image
+                src="/images/Secseal.PNG"
+                alt="SEC Seal"
+                width={120}
+                height={120}
+                className="opacity-75 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           </div>
         </motion.div>
@@ -87,7 +97,7 @@ export default function Home() {
               },
               {
                 number: "02",
-                text: "Crypto networks unlock novel ways to organize economic activity and incentivize human behavior using new programmatic systems"
+                text: "Digital rails unlock novel ways to organize economic activity and incentivize human behavior using new programmatic systems"
               },
               {
                 number: "03",
@@ -134,7 +144,7 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col justify-center">
               <div className="text-left">
-                <span className="text-lg font-semibold text-gray-600 dark:text-gray-400">Three Macro Investment Theses For Crypto</span>
+                <span className="text-lg font-semibold text-gray-600 dark:text-gray-400">Three Macro Investment Theses For Blockchain</span>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-2">The Open Finance Renaissance</h2>
                 <p className="mt-4 md:text-sm sm:text-sm lg:text-lg text-gray-600 dark:text-gray-300">By making all units of value—stocks, bonds, real estate, currencies, and so forth—interoperable, programmable, and composable on distributed ledgers, capital markets will become more efficient and accessible to everyone on the planet.</p>
                 <p className="mt-4 text-gray-600 md:text-sm sm:text-sm lg:text-lg dark:text-gray-300">Just as the proliferation of capital markets over the last 100 years supported staggering levels of wealth creation, the permissionless, expansionary effect of open finance will pave the way for new services and applications that will deliver tremendous value.</p>
@@ -231,7 +241,7 @@ export default function Home() {
           >
             <div className="w-full lg:w-2/3 mx-auto">
               <div className="aspect-w-1 aspect-h-1">
-                <img src="/images/global-state-free-money.webp" className="rounded shadow-lg object-cover" alt="Global State Free Money" />
+                <img src="/images/NYSEFGTX.jpg" className="rounded shadow-lg object-cover" alt="Global State Free Money" />
               </div>
             </div>
             <div className="w-full flex flex-col justify-center">

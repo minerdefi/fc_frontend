@@ -13,40 +13,40 @@ export default function Returns() {
 
     const returnsData: ReturnsData = {
         '1-month': {
-            'FG 30 Crypto Index Fund (NAV) *': '20.0%',
-            'Secondary Market Performance (OTC: FGW)': '38.3%',
-            'FG 10 Large Cap Crypto Index **': '20.2%',
-            'Bitcoin ***': '13.3%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '8.8-10.7%',
+            'Secondary Market Performance (OTC: FGW)': '9.1-15%',
+            'FG 10 Large Cap Digital Assets Index **': '8.8-11%',
+            'Bitcoin(Reference Benchmark) ***': '8%'
         },
         '3-months': {
-            'FG 30 Crypto Index Fund (NAV) *': '74.2%',
-            'Secondary Market Performance (OTC: FGW)': '139.3%',
-            'FG 10 Large Cap Crypto Index **': '75.3%',
-            'Bitcoin ***': '70.2%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '28-35%',
+            'Secondary Market Performance (OTC: FGW)': '35-50%',
+            'FG 10 Large Cap Digital Assets Index **': '30-36%',
+            'Bitcoin(Reference Benchmark) ***': '25%'
         },
         'ytd': {
-            'FG 30 Crypto Index Fund (NAV) *': '118.0%',
-            'Secondary Market Performance (OTC: FGW)': '183.8%',
-            'FG 10 Large Cap Crypto Index **': '123.2%',
-            'Bitcoin ***': '142.1%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '95-120%',
+            'Secondary Market Performance (OTC: FGW)': '130-160%',
+            'FG 10 Large Cap Digital Assets Index **': '100-125%',
+            'Bitcoin(Reference Benchmark) ***': '90%'
         },
         '12-months': {
-            'FG 30 Crypto Index Fund (NAV) *': '118.2%',
-            'Secondary Market Performance (OTC: FGW)': '179.6%',
-            'FG 10 Large Cap Crypto Index **': '123.8%',
-            'Bitcoin ***': '137.1%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '115-140%',
+            'Secondary Market Performance (OTC: FGW)': '160-190%',
+            'FG 10 Large Cap Digital Assets Index **': '120-145%',
+            'Bitcoin(Reference Benchmark) ***': '105%'
         },
         'since-inception': {
-            'FG 30 Crypto Index Fund (NAV) *': '655.1%',
-            'Secondary Bonus Market Performance (OTC: FGW)': 'N/A',
-            'FG 10 Large Cap Crypto Index **': '780.0%',
-            'Bitcoin ***': '1133.1%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '620-700%',
+            'Secondary Bonus Market Performance (OTC: FGW)': '-',
+            'FG 10 Large Cap Digital Assets Index **': '740-800%',
+            'Bitcoin(Reference Benchmark) ***': '600%'
         },
         'since-otc': {
-            'FG 30 Crypto Index Fund (NAV) *': '353.6%',
-            'Secondary Market Performance (OTC: FGW)': '119.4%',
-            'FG 10 Large Cap Crypto Index **': '400.5%',
-            'Bitcoin ***': '454.9%'
+            'FG 30 Digital Assets Index Fund (NAV) *': '368%',
+            'Secondary Market Performance (OTC: FGW)': '121%',
+            'FG 10 Large Cap Digital Assets Index **': '407%',
+            'Bitcoin(Reference Benchmark) ***': '350%'
         }
     };
 
@@ -150,7 +150,10 @@ export default function Returns() {
 
                     {/* Footnotes */}
                     <div className="mt-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                        <p>* Fund returns are calculated net of expenses. Shares are subject to a 2.5% annual fee that includes the management fee, custody charges for holding the fund's assets charged by the custodian, and customary fees and expenses of the fund administrator and auditor.</p>
+                        <p>* Fund returns are calculated net of all applicable fees and expenses. Shares are subject to an annual management fee of 0.50% and a performance fee of 15% of net profits, applied only
+                                when the fund generates positive returns, subject to a high-water mark. 
+                           <br></br> <br></br>These fees include custody charges for fund assets and customary administrative and audit
+                            expenses.</p>
                         <p>** Performance of an index is not illustrative of any particular investment. It is not possible to invest directly in an index. Index performance does not include the fees and expenses that are charged by the Fund. Past performance is not indicative of future performance.</p>
                         <p>*** The returns of bitcoin (BTC) are historical and unaudited and do not represent the returns of an actual account. These historical returns do not include the fees and expenses that are charged by any Fund.</p>
                         <p>† FG 10 Crypto Index Fund inception date: November 22, 2017.</p>

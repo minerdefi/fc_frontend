@@ -33,7 +33,7 @@ export default function MethodologySection() {
                             Methodology
                         </h2>
                         <p className="mb-4 leading-relaxed text-gray-600 dark:text-gray-300">
-                            The FG Crypto Indexes follow clear, rules-based processes to make them both investable and replicable. The methodologies take into account crypto-native factors surrounding liquidity, security, regulatory status, market representation, network distributions, and more.
+                            The FG Blockchain Indexes follow clear, rules-based processes to make them both investable and replicable. The methodologies take into account crypto-native factors surrounding liquidity, security, regulatory status, market representation, network distributions, and more.
                         </p>
                         <ul className="list-disc ml-4 mb-6 text-gray-600 dark:text-gray-300 space-y-2">
                             <li>The most valuable assets rebalanced monthly</li>

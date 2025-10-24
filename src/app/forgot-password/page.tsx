@@ -1,15 +1,28 @@
 'use client';
 
 import { apiRequest } from '@/utils/api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '../../context/AuthContext';
 
 export default function ForgotPasswordPage() {
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+    const { isAuthenticated, isLoading: isAuthLoading } = useAuth();
+    const router = useRouter();
+
+    useEffect(() => {
+        // Check if user is already authenticated and redirect to dashboard
+        if (!isAuthLoading && isAuthenticated) {
+            console.log('User already authenticated, redirecting to dashboard');
+            router.push('/dashboard');
+            return;
+        }
+    }, [isAuthenticated, isAuthLoading, router]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -49,7 +62,13 @@ export default function ForgotPasswordPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <div className="w-full max-w-md space-y-8">
+            {/* Show loading spinner while checking authentication */}
+            {isAuthLoading ? (
+                <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                </div>
+            ) : (
+                <div className="w-full max-w-md space-y-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -129,7 +148,8 @@ export default function ForgotPasswordPage() {
                         </Link>
                     </div>
                 </motion.form>
-            </div>
+                </div>
+            )}
         </div>
     );
 }

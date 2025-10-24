@@ -26,7 +26,6 @@ export default function DashboardPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [performanceData, setPerformanceData] = useState([]);
     const [recentActivity, setRecentActivity] = useState([]);
-
     useEffect(() => {
         const timer = setTimeout(() => {
             if (!profile) {
