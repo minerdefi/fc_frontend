@@ -310,7 +310,7 @@ const Analytics = () => {
   // Fund details for OWNB ETF
   const fundDetails = {
     ticker: 'OWNB',
-    name: 'FGPremium Bitcoin Standard Corporations ETF',
+    name: 'FGPremium Blockchain Standard Corporations ETF',
     nav: '$47.82',
     premium: '-0.15%',
     aum: '$1.2B',
@@ -325,155 +325,155 @@ const Analytics = () => {
     const companyData: { [key: string]: { [key: string]: string } } = {
       'MicroStrategy': {
         'shares': '15,563',
-        'bitcoin-holdings': '499,096',
-        'bitcoin-value': '$52,220,414,480',
+        'blockchain-holdings': '499,096',
+        'blockchain-value': '$52,220,414,480',
         'market-value': '$5,743,213.89',
         'weight': '21.19%'
       },
       'Metaplanet': {
         'shares': '360,000',
-        'bitcoin-holdings': '2,888',
-        'bitcoin-value': '$302,171,440',
+        'blockchain-holdings': '2,888',
+        'blockchain-value': '$302,171,440',
         'market-value': '$4,502,641.68',
         'weight': '16.61%'
       },
       'Riot Platforms': {
         'shares': '267,113',
-        'bitcoin-holdings': '18,692',
-        'bitcoin-value': '$1,955,743,960',
+        'blockchain-holdings': '18,692',
+        'blockchain-value': '$1,955,743,960',
         'market-value': '$2,655,103.22',
         'weight': '9.80%'
       },
       'MARA Holdings': {
         'shares': '167,369',
-        'bitcoin-holdings': '45,659',
-        'bitcoin-value': '$4,777,301,170',
+        'blockchain-holdings': '45,659',
+        'blockchain-value': '$4,777,301,170',
         'market-value': '$2,425,176.81',
         'weight': '8.95%'
       },
       'Hut 8': {
         'shares': '74,476',
-        'bitcoin-holdings': '10,171',
-        'bitcoin-value': '$1,064,191,730',
+        'blockchain-holdings': '10,171',
+        'blockchain-value': '$1,064,191,730',
         'market-value': '$1,268,326.28',
         'weight': '4.68%'
       },
       'Boyaa Interactive': {
         'shares': '1,621,708',
-        'bitcoin-holdings': '3,183',
-        'bitcoin-value': '$333,037,290',
+        'blockchain-holdings': '3,183',
+        'blockchain-value': '$333,037,290',
         'market-value': '$1,084,595.07',
         'weight': '4.00%'
       },
       'CleanSpark': {
         'shares': '114,266',
-        'bitcoin-holdings': '11,177',
-        'bitcoin-value': '$1,169,449,510',
+        'blockchain-holdings': '11,177',
+        'blockchain-value': '$1,169,449,510',
         'market-value': '$1,048,961.88',
         'weight': '3.87%'
       },
       'Cipher Mining': {
         'shares': '259,383',
-        'bitcoin-holdings': '1,032',
-        'bitcoin-value': '$107,978,160',
+        'blockchain-holdings': '1,032',
+        'blockchain-value': '$107,978,160',
         'market-value': '$988,249.23',
         'weight': '3.65%'
       },
       'HIVE Digital': {
         'shares': '497,738',
-        'bitcoin-holdings': '2,805',
-        'bitcoin-value': '$293,487,150',
+        'blockchain-holdings': '2,805',
+        'blockchain-value': '$293,487,150',
         'market-value': '$883,526.26',
         'weight': '3.26%'
       },
       'Semler Scientific': {
         'shares': '27,039',
-        'bitcoin-holdings': '3,192',
-        'bitcoin-value': '$333,978,960',
+        'blockchain-holdings': '3,192',
+        'blockchain-value': '$333,978,960',
         'market-value': '$863,625.66',
         'weight': '3.19%'
       },
       'Exodus Movement': {
         'shares': '27,939',
-        'bitcoin-holdings': '1,900',
-        'bitcoin-value': '$198,797,000',
+        'blockchain-holdings': '1,900',
+        'blockchain-value': '$198,797,000',
         'market-value': '$842,081.46',
         'weight': '3.11%'
       },
       'Bitfarms': {
         'shares': '801,046',
-        'bitcoin-holdings': '1,260',
-        'bitcoin-value': '$131,833,800',
+        'blockchain-holdings': '1,260',
+        'blockchain-value': '$131,833,800',
         'market-value': '$637,817.66',
         'weight': '2.35%'
       },
       'Fold': {
         'shares': '118,660',
-        'bitcoin-holdings': '1,485',
-        'bitcoin-value': '$155,375,550',
+        'blockchain-holdings': '1,485',
+        'blockchain-value': '$155,375,550',
         'market-value': '$544,649.40',
         'weight': '2.01%'
       },
       'Galaxy Digital': {
         'shares': '25,560',
-        'bitcoin-holdings': '3,150',
-        'bitcoin-value': '$329,584,500',
+        'blockchain-holdings': '3,150',
+        'blockchain-value': '$329,584,500',
         'market-value': '$487,692.90',
         'weight': '1.80%'
       },
       'Nexon Co, Ltd': {
         'shares': '25,100',
-        'bitcoin-holdings': '1,717',
-        'bitcoin-value': '$179,649,710',
+        'blockchain-holdings': '1,717',
+        'blockchain-value': '$179,649,710',
         'market-value': '$485,115.86',
         'weight': '1.79%'
       },
       'Coinbase': {
         'shares': '1,547',
-        'bitcoin-holdings': '9,183',
-        'bitcoin-value': '$960,817,290',
+        'blockchain-holdings': '9,183',
+        'blockchain-value': '$960,817,290',
         'market-value': '$456,813.63',
         'weight': '1.69%'
       },
       'BitFuFu': {
         'shares': '142,342',
-        'bitcoin-holdings': '1,800',
-        'bitcoin-value': '$188,334,000',
+        'blockchain-holdings': '1,800',
+        'blockchain-value': '$188,334,000',
         'market-value': '$452,647.56',
         'weight': '1.67%'
       },
       'Cango': {
         'shares': '99,071',
-        'bitcoin-holdings': '1,945',
-        'bitcoin-value': '$203,505,350',
+        'blockchain-holdings': '1,945',
+        'blockchain-value': '$203,505,350',
         'market-value': '$439,875.24',
         'weight': '1.62%'
       },
       'Tesla': {
         'shares': '1,271',
-        'bitcoin-holdings': '11,509',
-        'bitcoin-value': '$1,204,186,670',
+        'blockchain-holdings': '11,509',
+        'blockchain-value': '$1,204,186,670',
         'market-value': '$409,325.55',
         'weight': '1.51%'
       },
       'Bitdeer Technologies': {
         'shares': '30,567',
-        'bitcoin-holdings': '1,039',
-        'bitcoin-value': '$108,710,570',
+        'blockchain-holdings': '1,039',
+        'blockchain-value': '$108,710,570',
         'market-value': '$360,537.77',
         'weight': '1.33%'
       },
       'Block': {
         'shares': '5,618',
-        'bitcoin-holdings': '8,485',
-        'bitcoin-value': '$887,785,550',
+        'blockchain-holdings': '8,485',
+        'blockchain-value': '$887,785,550',
         'market-value': '$354,439.62',
         'weight': '1.31%'
       },
       'Canaan': {
         'shares': '265,285',
-        'bitcoin-holdings': '1,355',
-        'bitcoin-value': '$141,773,650',
+        'blockchain-holdings': '1,355',
+        'blockchain-value': '$141,773,650',
         'market-value': '$166,201.05',
         'weight': '0.61%'
       }
@@ -535,12 +535,12 @@ const Analytics = () => {
                     <span className="relative">Fund Holdings</span>
                   </a>
                   <a 
-                    href="#companies" 
+                    href="#performance" 
                     className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-full 
                       border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
                       transition-all duration-300 group"
                   >
-                    Bitcoin Standard Corporations
+                    FG Premium 10 Blockchain Index
                   </a>
                 </div>
               </div>
@@ -637,13 +637,13 @@ const Analytics = () => {
                       <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400">Ticker</th>
                       <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 md:hidden">
                         {selectedColumn === 'shares' && 'Shares'}
-                        {selectedColumn === 'bitcoin-holdings' && 'Bitcoin Holdings (BTC)*'}
-                        {selectedColumn === 'bitcoin-value' && 'Value of Bitcoin Holdings (USD)*'}
+                        {selectedColumn === 'Blockchain-holdings' && 'Blockchain Holdings (BTC)*'}
+                        {selectedColumn === 'Blockchain-value' && 'Value of Blockchain Holdings (USD)*'}
                         {selectedColumn === 'market-value' && 'Market Value'}
                         {selectedColumn === 'weight' && 'Weight (%)'}
                       </th>
-                      <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Bitcoin Holdings (BTC)*</th>
-                      <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Value of Bitcoin Holdings (USD)*</th>
+                      <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Digital Assets Holdings (BTC)*</th>
+                      <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Value of Digital Assets Holdings (USD)*</th>
                       <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Shares</th>
                       <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Market Value</th>
                       <th className="text-left py-3 px-2 text-sm font-medium text-gray-600 dark:text-gray-400 hidden md:table-cell">Weight (%)</th>
@@ -860,8 +860,8 @@ const Analytics = () => {
               
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
                 Holdings are subject to change. Current and future holdings are subject to risk. Shares, Market Value, and Weight as of 06/17/2025.<br/>
-                Bitcoin Holdings data is from the most recent company filings as of 03/08/2025.<br/>
-                Value of Bitcoin Holdings is calculated using the BTC-USD price as of 03/08/2025.
+                Digital Assets Holdings data is from the most recent company filings as of 03/08/2025.<br/>
+                Value of Digital Assets Holdings is calculated using the BTC-USD price as of 03/08/2025.
               </p>
             </div>
             
@@ -877,7 +877,7 @@ const Analytics = () => {
                     </span>
                 </h5>
                 <a
-                    href="/companies"
+                    href="/funds"
                     className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 rounded-full 
                       border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
                       text-xs sm:text-sm font-medium transition-all duration-300"
@@ -903,7 +903,7 @@ const Analytics = () => {
                   <p className="mt-3 text-xs sm:text-sm">The index rebalances quarterly.</p>
                 </div>
                 <a 
-                  href="https://s3.us-east-1.amazonaws.com/static.fgpremiumfunds.com/ownb/FGPremium-Bitcoin-Standard-Corporations-Index-Methodology.pdf" 
+                  href="/blog" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 rounded-full 
@@ -940,7 +940,7 @@ const Analytics = () => {
                 <div className="space-y-6">
                   <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Why invest in OWNB?</h2>
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    The FGPremium Bitcoin Standard Corporations ETF is the first ETF focused on companies that hold at least 1,000 bitcoin on their balance sheets. At a time when U.S. companies are sitting on trillions in low-yielding cash and U.S. Treasuries, these corporations are embracing bitcoin as a strategic reserve asset.
+                    The FGPremium Blockchain Standard Corporations ETF is the first ETF focused on companies that hold at least 1,000 bitcoin on their balance sheets. At a time when U.S. companies are sitting on trillions in low-yielding cash and U.S. Treasuries, these corporations are embracing bitcoin as a strategic reserve asset.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <a 
@@ -952,7 +952,7 @@ const Analytics = () => {
                       Learn More
                     </a>
                     <a 
-                      href="https://s3.us-east-1.amazonaws.com/static.fgpremiumfunds.com/ownb/OWNB-FGPremium-Bitcoin-Standard-Corporations-ETF-Investment-Case.pdf" 
+                      href="/blog" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center px-6 py-3 rounded-full 
@@ -960,7 +960,7 @@ const Analytics = () => {
                         hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700
                         font-semibold transition-all duration-300"
                     >
-                      Investment Case
+                      Blockchain Theses
                     </a>
                   </div>
                 </div>
@@ -1075,7 +1075,7 @@ const Analytics = () => {
                 
                 <div className="space-y-1">
                   <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Index</h4>
-                  <p className="text-base font-semibold text-gray-900 dark:text-white">FGPremium Bitcoin Standard Corporations Index</p>
+                  <p className="text-base font-semibold text-gray-900 dark:text-white">FGPremium Blockchain Standard Corporations Index</p>
                 </div>
                 
                 <div className="space-y-1">
