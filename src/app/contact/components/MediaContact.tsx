@@ -39,7 +39,7 @@ export default function MediaContact() {
                 <div className="flex space-x-6">
                     {[
 
-                        { icon: faTwitter, href: "#" },
+                      
 
                         { icon: faEnvelope, href: "mailto:support@fgpremiumfunds.com" }
                     ].map((social, index) => (
