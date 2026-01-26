@@ -80,11 +80,11 @@ const LoginPage = () => {
                 <div className="text-center mb-8">
                     <Link href="/">
                         <Image
-                            src="/images/fc1.png"
+                            src="/images/fc2.png"
                             alt="FG Premium Logo"
                             width={100}
                             height={100}
-                            className="mx-auto dark:invert transform hover:scale-105 transition-all duration-200"
+                            className="mx-auto transform hover:scale-105 transition-all duration-200"
                             priority
                         />
                     </Link>

@@ -177,11 +177,11 @@ const RegisterPage = () => {
                             >
                                 <Link href="/" className="inline-block">
                                     <Image
-                                        src="/images/fc1.png"
+                                        src="/images/fc2.png"
                                         alt="FG Premium"
                                         width={80}
                                         height={80}
-                                        className="dark:invert transform hover:scale-105 transition-transform duration-200"
+                                        className="transform hover:scale-105 transition-transform duration-200"
                                         priority
                                     />
                                 </Link>

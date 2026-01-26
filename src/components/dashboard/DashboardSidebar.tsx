@@ -77,11 +77,10 @@ export default function DashboardSidebar({ isOpen, onClose }: DashboardSidebarPr
                     <div className="p-6 border-b border-gray-200 dark:border-gray-800">
                         <Link href="/dashboard" className="flex items-center">
                             <Image
-                                src="/images/fc1.png"
+                                src="/images/fc2.png"
                                 alt="Forbes Capital"
                                 width={35}
                                 height={35}
-                                className="dark:invert"
                             />
                             <span className="ml-3 text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                                 FG Premium Funds

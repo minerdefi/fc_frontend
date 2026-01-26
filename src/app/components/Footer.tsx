@@ -14,11 +14,10 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center mb-4">
                             <Image
-                                src="/images/fc1.png"
+                                src="/images/fc2.png"
                                 alt="FG Premium"
                                 width={40}
                                 height={40}
-                                className="dark:invert"
                             />
                         </Link>
                         <p className="text-sm text-gray-600 dark:text-gray-400">

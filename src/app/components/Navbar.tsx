@@ -61,11 +61,11 @@ export default function Navbar() {
                 <div className="text-black dark:text-white h-8">
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="/images/fc1.png"
+                            src="/images/fc2.png"
                             alt="FG Premium  Logo"
-                            width={70}
-                            height={50}
-                            className="dark:invert object-contain"
+                            width={40}
+                            height={32}
+                            className="object-contain"
                         />
                     </Link>
                 </div>
