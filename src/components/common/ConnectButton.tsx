@@ -84,7 +84,7 @@ export default function ConnectButton() {
   const getConnectionStatusClass = () => {
     if (error) return 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-300';
     if (isConnected) return 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300';
-    return 'bg-[#308e87] hover:bg-[#266f69] text-white';
+    return 'bg-[#6B3FA0] hover:bg-[#266f69] text-white';
   };
 
   return (

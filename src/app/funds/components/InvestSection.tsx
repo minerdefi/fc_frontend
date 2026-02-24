@@ -22,7 +22,7 @@ export default function InvestSection() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         href="/dashboard"
-                        className="inline-flex items-center px-8 py-3 rounded-full border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white dark:text-[#308e87] dark:hover:text-white transition-all duration-300 font-semibold group"
+                        className="inline-flex items-center px-8 py-3 rounded-full border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white dark:text-[#6B3FA0] dark:hover:text-white transition-all duration-300 font-semibold group"
                     >
                         Invest Now
                         <svg

@@ -35,7 +35,7 @@ export default function ConnectWalletPrompt({
         
         <button
           onClick={() => open()}
-          className="inline-flex items-center px-6 py-3 bg-[#308e87] hover:bg-[#266f69] text-white rounded-lg transition-colors"
+          className="inline-flex items-center px-6 py-3 bg-[#6B3FA0] hover:bg-[#266f69] text-white rounded-lg transition-colors"
         >
           <FontAwesomeIcon icon={faPlug} className="mr-2" />
           Connect Wallet

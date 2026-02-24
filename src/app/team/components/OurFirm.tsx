@@ -57,8 +57,8 @@ export default function OurFirm() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                             </div>
-                            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#308e87]/10 rounded-full blur-3xl"></div>
-                            <div className="absolute -top-6 -left-6 w-48 h-48 bg-[#308e87]/10 rounded-full blur-3xl"></div>
+                            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#6B3FA0]/10 rounded-full blur-3xl"></div>
+                            <div className="absolute -top-6 -left-6 w-48 h-48 bg-[#6B3FA0]/10 rounded-full blur-3xl"></div>
                         </motion.div>
                     </div>
                 </motion.div>

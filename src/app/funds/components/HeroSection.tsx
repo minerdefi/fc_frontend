@@ -17,7 +17,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-base sm:text-lg mb-2 font-semibold text-[#308e87]"
+                        className="text-base sm:text-lg mb-2 font-semibold text-[#6B3FA0]"
                     >
                         Private Offering
                     </motion.h6>

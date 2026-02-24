@@ -26,7 +26,7 @@ export default function DashboardPageLayout({
     if (isAuthLoading) {
         return (
             <div className="flex items-center justify-center min-h-screen">
-                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#6B3FA0]"></div>
             </div>
         );
     }

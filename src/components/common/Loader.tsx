@@ -16,7 +16,7 @@ export default function Loader({ size = 'medium', fullScreen = false, text = 'Lo
     const loaderContent = (
         <div className="flex flex-col items-center justify-center space-y-3">
             <div className={`${sizeClasses[size]} animate-spin`}>
-                <div className="h-full w-full border-4 border-gray-200 rounded-full border-t-[#308e87]"></div>
+                <div className="h-full w-full border-4 border-gray-200 rounded-full border-t-[#6B3FA0]"></div>
             </div>
             {text && (
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">

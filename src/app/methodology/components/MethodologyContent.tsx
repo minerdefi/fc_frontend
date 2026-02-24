@@ -52,7 +52,7 @@ export default function MethodologyContent({ toggleSidebar }: MethodologyContent
                     >
                         <div className="flex items-center space-x-4 mb-4">
                             <div className="p-3 bg-gray-100 dark:bg-gray-700/50 rounded-lg">
-                                <FontAwesomeIcon icon={card.icon} className="text-2xl text-[#308e87]" />
+                                <FontAwesomeIcon icon={card.icon} className="text-2xl text-[#6B3FA0]" />
                             </div>
                             <h3 className="text-xl font-bold">{card.title}</h3>
                         </div>
@@ -60,7 +60,7 @@ export default function MethodologyContent({ toggleSidebar }: MethodologyContent
                         <motion.a
                             whileHover={{ x: 4 }}
                             href="#"
-                            className="inline-flex items-center text-[#308e87] font-medium hover:opacity-80 transition-opacity"
+                            className="inline-flex items-center text-[#6B3FA0] font-medium hover:opacity-80 transition-opacity"
                         >
                             Jump to <span className="ml-1">→</span>
                         </motion.a>

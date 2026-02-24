@@ -34,13 +34,13 @@ const Navbar = () => {
                     <div className="flex items-center space-x-4">
                         <Link
                             href="/"
-                            className="text-gray-700 dark:text-gray-300 hover:text-[#308e87] px-3 py-2 rounded-md text-sm font-medium"
+                            className="text-gray-700 dark:text-gray-300 hover:text-[#6B3FA0] px-3 py-2 rounded-md text-sm font-medium"
                         >
                             Home
                         </Link>
                         <Link
                             href="/analytics"
-                            className="text-gray-700 dark:text-gray-300 hover:text-[#308e87] px-3 py-2 rounded-md text-sm font-medium"
+                            className="text-gray-700 dark:text-gray-300 hover:text-[#6B3FA0] px-3 py-2 rounded-md text-sm font-medium"
                         >
                             Analytics
                         </Link>

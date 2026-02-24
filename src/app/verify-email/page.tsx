@@ -61,7 +61,7 @@ const VerifyEmailPage: React.FC = () => {
                         animate={{ opacity: 1 }}
                         className="text-center"
                     >
-                        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87] mx-auto mb-8"></div>
+                        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#6B3FA0] mx-auto mb-8"></div>
                         <p className="text-xl text-gray-600 dark:text-gray-300">{message}</p>
                     </motion.div>
                 )}
@@ -82,7 +82,7 @@ const VerifyEmailPage: React.FC = () => {
                             href="/login"
                             className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
                         >
-                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                             <span className="relative">Go to Login</span>
                         </Link>
                     </motion.div>
@@ -105,7 +105,7 @@ const VerifyEmailPage: React.FC = () => {
                             href="/register"
                             className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
                         >
-                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                             <span className="relative">Back to Registration</span>
                         </Link>
                     </motion.div>

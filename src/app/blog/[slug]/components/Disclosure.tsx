@@ -10,7 +10,7 @@ export default function Disclosure() {
                     The content is provided for informational purposes only, and should not be relied upon as the basis for an investment decision... {/* Rest of disclosure text */}
                 </p>
                 <p className="mb-2 titillium-web-extralight-italic">
-                    A list of investments made by funds managed by FG Premium Funds is available here: <span className="text-[#308e87] hover:underline cursor-pointer">https://forbespartners.org/main/portfolio/</span>
+                    A list of investments made by funds managed by FG Premium Funds is available here: <span className="text-[#6B3FA0] hover:underline cursor-pointer">https://forbespartners.org/main/portfolio/</span>
                 </p>
                 {/* Use proper JSX comments */}
                 <p className="text-sm text-gray-500">

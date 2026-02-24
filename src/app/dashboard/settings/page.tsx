@@ -104,7 +104,7 @@ export default function SettingsPage() {
                                     <button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="px-4 py-2 bg-[#308e87] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
+                                        className="px-4 py-2 bg-[#6B3FA0] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
                                     >
                                         {isLoading ? 'Saving...' : 'Save Changes'}
                                     </button>

@@ -65,7 +65,7 @@ export default function ForgotPasswordPage() {
             {/* Show loading spinner while checking authentication */}
             {isAuthLoading ? (
                 <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#6B3FA0]"></div>
                 </div>
             ) : (
                 <div className="w-full max-w-md space-y-8">
@@ -123,7 +123,7 @@ export default function ForgotPasswordPage() {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]"
+                            className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]"
                             placeholder="Enter your email"
                             disabled={isLoading}
                         />
@@ -133,7 +133,7 @@ export default function ForgotPasswordPage() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full px-4 py-3 bg-[#308e87] text-white rounded-lg hover:bg-[#277771] disabled:opacity-50 transition-colors duration-200"
+                            className="w-full px-4 py-3 bg-[#6B3FA0] text-white rounded-lg hover:bg-[#277771] disabled:opacity-50 transition-colors duration-200"
                         >
                             {isLoading ? 'Sending...' : 'Send Reset Instructions'}
                         </button>
@@ -142,7 +142,7 @@ export default function ForgotPasswordPage() {
                     <div className="text-center">
                         <Link
                             href="/login"
-                            className="text-sm text-[#308e87] hover:text-[#277771]"
+                            className="text-sm text-[#6B3FA0] hover:text-[#277771]"
                         >
                             Back to Login
                         </Link>

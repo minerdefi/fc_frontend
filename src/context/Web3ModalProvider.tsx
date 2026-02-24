@@ -71,8 +71,8 @@ const config = createConfig({
           themeMode: 'light',
           themeVariables: {
             '--wcm-z-index': '9999',
-            '--wcm-accent-color': '#308e87',
-            '--wcm-background-color': '#308e87',
+            '--wcm-accent-color': '#6B3FA0',
+            '--wcm-background-color': '#6B3FA0',
           },
         },
       }),

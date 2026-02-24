@@ -134,7 +134,7 @@ export default function WalletConnectButton() {
                         </p>
                         <button
                             onClick={() => open()}
-                            className="bg-[#308e87]  text-white rounded-lg py-2 px-4 font-medium transition-colors flex items-center justify-center mx-auto"
+                            className="bg-[#6B3FA0]  text-white rounded-lg py-2 px-4 font-medium transition-colors flex items-center justify-center mx-auto"
                         >
                             <FontAwesomeIcon icon={faLink} className="mr-2 h-4 w-4" />
                             Connect Wallet

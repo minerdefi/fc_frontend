@@ -29,8 +29,8 @@ export function CryptocurrencySelector({ wallets, selectedCrypto, onSelect }: Cr
                         onClick={() => onSelect(wallet.cryptocurrency)}
                         className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all
                             ${selectedCrypto === wallet.cryptocurrency
-                                ? 'border-[#308e87] bg-[#308e87]/5 dark:bg-[#308e87]/10'
-                                : 'border-gray-200 dark:border-gray-700 hover:border-[#308e87]/50 dark:hover:border-[#308e87]/50'
+                                ? 'border-[#6B3FA0] bg-[#6B3FA0]/5 dark:bg-[#6B3FA0]/10'
+                                : 'border-gray-200 dark:border-gray-700 hover:border-[#6B3FA0]/50 dark:hover:border-[#6B3FA0]/50'
                             }
                         `}
                     >

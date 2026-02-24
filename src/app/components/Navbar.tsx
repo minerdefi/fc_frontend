@@ -70,42 +70,42 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="hidden md:flex gap-4">
-                    <Link href="/" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link href="/" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         Home
                     </Link>
-                    <Link href="/funds" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link href="/funds" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         Funds
                     </Link>
-                    <Link  href="/analytics" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link  href="/analytics" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         OWNB
                     </Link>
-                    <Link href="/portfolio" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link href="/portfolio" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         Portfolio
                     </Link>
-                    <Link href="/team" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link href="/team" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         Team
                     </Link>
-                    <Link href="/contact" className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none">
+                    <Link href="/contact" className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none">
                         Contact
                     </Link>
                 </div>
                 <div className="flex items-center gap-4">
                     <Link
                         href={isAuthenticated ? "/dashboard" : "/login"}
-                        className="text-white bg-[#308e87] hover:bg-[#308e87]/90 px-4 py-2 rounded-full transition-colors duration-300 text-sm font-medium"
+                        className="text-white bg-[#6B3FA0] hover:bg-[#6B3FA0]/90 px-4 py-2 rounded-full transition-colors duration-300 text-sm font-medium"
                     >
                         {isAuthenticated ? "Dashboard" : "Login"}
                     </Link>
                     <button
                         onClick={toggleTheme}
-                        className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none"
+                        className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none"
                     >
                         <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
                     </button>
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-black dark:text-white hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300 focus:outline-none"
+                            className="text-black dark:text-white hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300 focus:outline-none"
                         >
                             <FontAwesomeIcon
                                 icon={isOpen ? faXmark : faBars}
@@ -133,8 +133,8 @@ export default function Navbar() {
                                     href={link.href}
                                     onClick={handleLinkClick}
                                     className="block px-6 py-3 text-black dark:text-white 
-                                             hover:bg-[#308e87] hover:text-white
-                                             dark:hover:bg-[#308e87] dark:hover:text-white 
+                                             hover:bg-[#6B3FA0] hover:text-white
+                                             dark:hover:bg-[#6B3FA0] dark:hover:text-white 
                                              transition-colors duration-300 bg-transparent focus:outline-none"
                                 >
                                     {link.name}

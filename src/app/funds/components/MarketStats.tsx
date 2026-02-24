@@ -28,7 +28,7 @@ export default function MarketStats() {
                             className="group hover:scale-105 transition-transform duration-300"
                         >
                             <div className="p-6 rounded-xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all">
-                                <h6 className="text-sm font-bold text-[#308e87] dark:text-[#308e87]">{stat.title}</h6>
+                                <h6 className="text-sm font-bold text-[#6B3FA0] dark:text-[#6B3FA0]">{stat.title}</h6>
                                 <h5 className="text-xl font-semibold mt-2 text-gray-900 dark:text-white">{stat.value}</h5>
                             </div>
                         </motion.div>

@@ -69,7 +69,7 @@ const LoginPage = () => {
             {/* Show loading spinner while checking authentication */}
             {isLoading ? (
                 <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#6B3FA0]"></div>
                 </div>
             ) : (
                 <motion.div
@@ -122,7 +122,7 @@ const LoginPage = () => {
                                     name="login"
                                     value={formData.login}
                                     onChange={handleChange}
-                                    className={`w-full px-4 py-2 rounded-lg border ${errors.login ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                    className={`w-full px-4 py-2 rounded-lg border ${errors.login ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                     placeholder="Enter your username or email"
                                 />
                                 {errors.login && (
@@ -139,7 +139,7 @@ const LoginPage = () => {
                                     name="password"
                                     value={formData.password}
                                     onChange={handleChange}
-                                    className={`w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                    className={`w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                     placeholder="Enter your password"
                                 />
                                 {errors.password && (
@@ -158,7 +158,7 @@ const LoginPage = () => {
                                 disabled={isFormLoading}
                                 className="relative w-full inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
                             >
-                                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                                 <span className="relative">
                                     {isFormLoading ? 'Signing in...' : 'Sign In'}
                                 </span>
@@ -166,7 +166,7 @@ const LoginPage = () => {
 
                             <p className="text-center text-sm text-gray-600 dark:text-gray-400">
                                 Don't have an account?{' '}
-                                <Link href="/register" className="text-[#308e87] hover:text-[#308e87]/80 font-medium">
+                                <Link href="/register" className="text-[#6B3FA0] hover:text-[#6B3FA0]/80 font-medium">
                                     Sign up
                                 </Link>
                             </p>
@@ -175,7 +175,7 @@ const LoginPage = () => {
                         <div className="text-sm mt-4">
                             <Link
                                 href="/forgot-password"
-                                className="text-[#308e87] hover:text-[#277771]"
+                                className="text-[#6B3FA0] hover:text-[#277771]"
                             >
                                 Forgot your password?
                             </Link>

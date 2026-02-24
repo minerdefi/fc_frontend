@@ -68,7 +68,7 @@ const DashboardNavbar = ({ onMenuClick, username, email }: DashboardNavbarProps)
                                 onClick={() => setShowUserMenu(!showUserMenu)}
                                 className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                             >
-                                <div className="w-8 h-8 rounded-full bg-[#308e87] flex items-center justify-center">
+                                <div className="w-8 h-8 rounded-full bg-[#6B3FA0] flex items-center justify-center">
                                     <FontAwesomeIcon icon={faUser} className="h-4 w-4 text-white" />
                                 </div>
                                 <div className="hidden md:block text-left">

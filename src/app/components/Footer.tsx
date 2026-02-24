@@ -32,17 +32,17 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/team" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/team" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/team" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/team" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Team
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/contact" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Contact
                                 </Link>
                             </li>
@@ -56,17 +56,17 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/blog" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/blog" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="#" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     FAQ
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/contact" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Support
                                 </Link>
                             </li>
@@ -80,12 +80,12 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/privacy" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/privacy" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/terms" className="text-base text-gray-500 hover:text-[#308e87] transition-colors">
+                                <Link href="/terms" className="text-base text-gray-500 hover:text-[#6B3FA0] transition-colors">
                                     Terms of Service
                                 </Link>
                             </li>
@@ -101,10 +101,10 @@ export default function Footer() {
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
 
-                            <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">
+                            <a href="#" className="text-gray-400 hover:text-[#F5B31A] transition-colors">
                                 <FontAwesomeIcon icon={faGithub} className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-[#308e87] transition-colors">
+                            <a href="#" className="text-gray-400 hover:text-[#F5B31A] transition-colors">
                                 <FontAwesomeIcon icon={faDiscord} className="h-5 w-5" />
                             </a>
                         </div>

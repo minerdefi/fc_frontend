@@ -68,7 +68,7 @@ export default function ProfilePage() {
                     <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
                         <Link
                             href="/dashboard/settings"
-                            className="inline-flex w-full sm:w-auto items-center justify-center px-3 sm:px-4 py-2 bg-[#308e87] text-white rounded-md hover:bg-[#277771]"
+                            className="inline-flex w-full sm:w-auto items-center justify-center px-3 sm:px-4 py-2 bg-[#6B3FA0] text-white rounded-md hover:bg-[#277771]"
                         >
                             Edit Profile Settings
                         </Link>

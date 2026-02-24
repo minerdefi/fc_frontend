@@ -22,7 +22,7 @@ export default function BlogPage() {
                         <div className="text-center p-6 md:p-8 lg:p-12 border-b border-gray-200/50 dark:border-gray-700/50">
                             <Link
                                 href="#"
-                                className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#308e87]/10 text-[#308e87] text-sm font-semibold hover:bg-[#308e87]/20 transition-colors"
+                                className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#6B3FA0]/10 text-[#6B3FA0] text-sm font-semibold hover:bg-[#6B3FA0]/20 transition-colors"
                             >
                                 {post.category}
                             </Link>
@@ -31,7 +31,7 @@ export default function BlogPage() {
                             </h1>
                             <div className="flex items-center justify-center space-x-4">
                                 <div className="flex items-center">
-                                    <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-[#308e87]/20">
+                                    <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-[#6B3FA0]/20">
                                         <Image
                                             src={post.author.avatar}
                                             alt={post.author.name}
@@ -73,7 +73,7 @@ export default function BlogPage() {
                                         <ul className="mt-6 space-y-4 list-none">
                                             {section.bullets.map((bullet, bIndex) => (
                                                 <li key={bIndex} className="flex items-start">
-                                                    <span className="mr-3 mt-1.5 h-2 w-2 rounded-full bg-[#308e87]" />
+                                                    <span className="mr-3 mt-1.5 h-2 w-2 rounded-full bg-[#6B3FA0]" />
                                                     <span className="text-gray-700 dark:text-gray-300">{bullet}</span>
                                                 </li>
                                             ))}

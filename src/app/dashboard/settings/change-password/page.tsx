@@ -129,7 +129,7 @@ export default function ChangePasswordPage() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full px-4 py-2 bg-[#308e87] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
+                            className="w-full px-4 py-2 bg-[#6B3FA0] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
                         >
                             {isLoading ? 'Changing Password...' : 'Change Password'}
                         </button>

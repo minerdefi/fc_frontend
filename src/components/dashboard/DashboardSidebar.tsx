@@ -82,7 +82,7 @@ export default function DashboardSidebar({ isOpen, onClose }: DashboardSidebarPr
                                 width={35}
                                 height={35}
                             />
-                            <span className="ml-3 text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                            <span className="ml-3 text-lg font-semibold bg-gradient-to-r from-[#6B3FA0] to-[#F5B31A] bg-clip-text text-transparent">
                                 FG Premium Funds
                             </span>
                         </Link>
@@ -105,7 +105,7 @@ export default function DashboardSidebar({ isOpen, onClose }: DashboardSidebarPr
                                                 className={`
                                                     flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-colors
                                                     ${isActive
-                                                        ? 'bg-[#308e87] text-white'
+                                                        ? 'bg-[#6B3FA0] text-white'
                                                         : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
                                                     }
                                                 `}

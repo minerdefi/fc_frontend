@@ -23,14 +23,14 @@ export default function FeesAndExpenses() {
                                 <div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-lg font-semibold text-gray-900 dark:text-white">Management Fee</span>
-                                        <span className="text-lg font-light text-[#308e87]">0.50% per year</span>
+                                        <span className="text-lg font-light text-[#6B3FA0]">0.50% per year</span>
                                     </div>
                                 </div>
                                 <hr className="border-gray-200 dark:border-gray-700" />
                                 <div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-lg font-semibold text-gray-900 dark:text-white">Performance Fee</span>
-                                        <span className="text-lg font-light text-[#308e87]">15% of net profits</span>
+                                        <span className="text-lg font-light text-[#6B3FA0]">15% of net profits</span>
                                     </div>
                                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                         Only applies when investors earn positive returns, subject to a high-water mark
@@ -40,7 +40,7 @@ export default function FeesAndExpenses() {
                         </div>
                         <div className="bg-white dark:bg-gray-800 shadow-lg p-6">
                             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                                We believe in <span className="font-semibold text-[#308e87]">performance-based value creation</span> - not flat fees. When our investors grow, we grow.
+                                We believe in <span className="font-semibold text-[#6B3FA0]">performance-based value creation</span> - not flat fees. When our investors grow, we grow.
                             </p>
                         </div>
                     </div>

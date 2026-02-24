@@ -49,12 +49,12 @@ export default function PortfolioList() {
                                         <div className="flex space-x-4">
                                             {company.twitter && (
                                                 <a href={company.twitter} target="_blank" rel="noopener noreferrer"
-                                                    className="hover:text-[#308e87] transition-colors">
+                                                    className="hover:text-[#6B3FA0] transition-colors">
                                                     <i className="fa-brands fa-x-twitter"></i>
                                                 </a>
                                             )}
                                             <a href={company.website} target="_blank" rel="noopener noreferrer"
-                                                className="hover:text-[#308e87] transition-colors">
+                                                className="hover:text-[#6B3FA0] transition-colors">
                                                 Website
                                             </a>
                                         </div>

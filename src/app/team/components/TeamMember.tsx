@@ -46,7 +46,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
                             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">
                                 {member.name}
                             </h3>
-                            <p className="text-lg text-[#308e87] font-medium">
+                            <p className="text-lg text-[#6B3FA0] font-medium">
                                 {member.title}
                             </p>
                         </div>
@@ -66,7 +66,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
                                     href={url}
                                     target={platform === 'email' ? undefined : "_blank"}
                                     rel={platform === 'email' ? undefined : "noopener noreferrer"}
-                                    className="text-gray-400 hover:text-[#308e87] transition-colors"
+                                    className="text-gray-400 hover:text-[#6B3FA0] transition-colors"
                                 >
                                     <FontAwesomeIcon
                                         icon={
@@ -86,7 +86,7 @@ export default function TeamMember({ member, index }: TeamMemberProps) {
 
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="lg:hidden text-[#308e87] hover:text-[#308e87]/80"
+                        className="lg:hidden text-[#6B3FA0] hover:text-[#6B3FA0]/80"
                     >
                         <FontAwesomeIcon icon={isExpanded ? faChevronUp : faChevronDown} className="text-xl" />
                     </button>

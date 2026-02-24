@@ -50,7 +50,7 @@ export default function MediaContact() {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-700 dark:text-gray-300 hover:text-[#308e87] dark:hover:text-[#308e87] transition-colors duration-300"
+                            className="text-gray-700 dark:text-gray-300 hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-colors duration-300"
                         >
                             <FontAwesomeIcon icon={social.icon} className="text-2xl" />
                         </motion.a>

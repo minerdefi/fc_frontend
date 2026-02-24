@@ -99,7 +99,7 @@ export default function TransactionPinPage() {
                         <button
                             onClick={handleRequestOTP}
                             disabled={isLoading}
-                            className="w-full px-4 py-2 bg-[#308e87] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
+                            className="w-full px-4 py-2 bg-[#6B3FA0] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
                         >
                             {isLoading ? 'Sending...' : 'Send Verification Code'}
                         </button>
@@ -166,7 +166,7 @@ export default function TransactionPinPage() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full px-4 py-2 bg-[#308e87] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
+                                className="w-full px-4 py-2 bg-[#6B3FA0] text-white rounded-md hover:bg-[#277771] disabled:opacity-50"
                             >
                                 {isLoading ? 'Setting PIN...' : 'Set PIN'}
                             </button>

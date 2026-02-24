@@ -42,7 +42,7 @@ export default function KeyFacts() {
                                 <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3"
                                     target="_blank"
                                     rel="noopener"
-                                    className="text-[#308e87] hover:underline">
+                                    className="text-[#6B3FA0] hover:underline">
                                     Accredited Investors
                                 </a>
                             </p>

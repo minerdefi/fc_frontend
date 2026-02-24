@@ -531,13 +531,13 @@ const Analytics = () => {
                     href="#holdings" 
                     className="relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white rounded-full group"
                   >
-                    <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                    <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                     <span className="relative">Fund Holdings</span>
                   </a>
                   <a 
                     href="#performance" 
                     className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-full 
-                      border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
+                      border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
                       transition-all duration-300 group"
                   >
                     FG Premium 10 Blockchain Index
@@ -556,47 +556,47 @@ const Analytics = () => {
             <nav className="flex justify-center space-x-1 overflow-x-auto py-2">
               <a 
                 href="#holdings" 
-                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#308e87] dark:hover:text-[#308e87] transition-all duration-300 ease-in-out hover:bg-[#308e87]/10 dark:hover:bg-[#308e87]/20 rounded-lg"
+                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-all duration-300 ease-in-out hover:bg-[#6B3FA0]/10 dark:hover:bg-[#6B3FA0]/20 rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('holdings')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <span className="relative z-10">Holdings</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#308e87]/10 to-[#308e87]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B3FA0]/10 to-[#6B3FA0]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
                 href="#why-ownb" 
-                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#308e87] dark:hover:text-[#308e87] transition-all duration-300 ease-in-out hover:bg-[#308e87]/10 dark:hover:bg-[#308e87]/20 rounded-lg"
+                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-all duration-300 ease-in-out hover:bg-[#6B3FA0]/10 dark:hover:bg-[#6B3FA0]/20 rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('why-ownb')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <span className="relative z-10">Why OWNB</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#308e87]/10 to-[#308e87]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B3FA0]/10 to-[#6B3FA0]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
                 href="#fund-summary" 
-                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#308e87] dark:hover:text-[#308e87] transition-all duration-300 ease-in-out hover:bg-[#308e87]/10 dark:hover:bg-[#308e87]/20 rounded-lg"
+                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-all duration-300 ease-in-out hover:bg-[#6B3FA0]/10 dark:hover:bg-[#6B3FA0]/20 rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('fund-summary')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <span className="relative z-10">Fund Summary</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#308e87]/10 to-[#308e87]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B3FA0]/10 to-[#6B3FA0]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
                 href="#performance" 
-                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#308e87] dark:hover:text-[#308e87] transition-all duration-300 ease-in-out hover:bg-[#308e87]/10 dark:hover:bg-[#308e87]/20 rounded-lg"
+                className="group relative whitespace-nowrap px-6 py-3 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#6B3FA0] dark:hover:text-[#6B3FA0] transition-all duration-300 ease-in-out hover:bg-[#6B3FA0]/10 dark:hover:bg-[#6B3FA0]/20 rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('performance')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <span className="relative z-10">Performance</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#308e87]/10 to-[#308e87]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B3FA0]/10 to-[#6B3FA0]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </nav>
           </div>
@@ -879,7 +879,7 @@ const Analytics = () => {
                 <a
                     href="/funds"
                     className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 rounded-full 
-                      border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
+                      border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
                       text-xs sm:text-sm font-medium transition-all duration-300"
                 >
                     View Full List
@@ -907,7 +907,7 @@ const Analytics = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 rounded-full 
-                    border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
+                    border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
                     text-xs sm:text-sm font-medium transition-all duration-300 mt-3 sm:mt-4"
                 >
                   View Full Methodology
@@ -946,7 +946,7 @@ const Analytics = () => {
                     <a 
                       href="/contact" 
                       className="inline-flex items-center justify-center px-6 py-3 rounded-full 
-                        border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
+                        border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
                         font-semibold transition-all duration-300"
                     >
                       Learn More
@@ -1289,7 +1289,7 @@ const Analytics = () => {
                     href="https://ownbetf.com/materials" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-[#308e87] hover:text-[#308e87]/80 underline transition-colors"
+                    className="text-[#6B3FA0] hover:text-[#6B3FA0]/80 underline transition-colors"
                   >
                     ownbetf.com/materials
                   </a>
@@ -1393,7 +1393,7 @@ const Analytics = () => {
               <a 
                 href="/contact" 
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full 
-                  border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
+                  border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
                   transition-all duration-300 transform hover:scale-105 group"
               >
                 Contact Us

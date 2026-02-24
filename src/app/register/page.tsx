@@ -116,7 +116,7 @@ const RegisterPage = () => {
             {/* Show loading spinner while checking authentication */}
             {isAuthLoading ? (
                 <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#308e87]"></div>
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#6B3FA0]"></div>
                 </div>
             ) : (
                 <>
@@ -141,13 +141,13 @@ const RegisterPage = () => {
 
             <div className="flex min-h-screen">
                 {/* Left side - Image */}
-                <div className="hidden lg:flex lg:w-1/2 relative bg-[#308e87]/10 dark:bg-[#308e87]/5">
+                <div className="hidden lg:flex lg:w-1/2 relative bg-[#6B3FA0]/10 dark:bg-[#6B3FA0]/5">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="absolute inset-0 flex items-center justify-center p-12"
                     >
-                        <div className="w-full h-full relative bg-gradient-to-br from-[#308e87]/20 to-transparent rounded-3xl overflow-hidden">
+                        <div className="w-full h-full relative bg-gradient-to-br from-[#6B3FA0]/20 to-transparent rounded-3xl overflow-hidden">
                             <Image
                                 src="/images/signup.jpg"
                                 alt="Investment Illustration"
@@ -208,7 +208,7 @@ const RegisterPage = () => {
                                                     name="firstName"
                                                     value={formData.firstName}
                                                     onChange={handleChange}
-                                                    className={`w-full px-4 py-2 rounded-lg border ${errors.firstName ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                                    className={`w-full px-4 py-2 rounded-lg border ${errors.firstName ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                                     placeholder="Enter your first name"
                                                 />
                                                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -228,7 +228,7 @@ const RegisterPage = () => {
                                                     name="lastName"
                                                     value={formData.lastName}
                                                     onChange={handleChange}
-                                                    className={`w-full px-4 py-2 rounded-lg border ${errors.lastName ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                                    className={`w-full px-4 py-2 rounded-lg border ${errors.lastName ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                                     placeholder="Enter your last name"
                                                 />
                                                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -253,7 +253,7 @@ const RegisterPage = () => {
                                                     name="username"
                                                     value={formData.username}
                                                     onChange={handleChange}
-                                                    className={`w-full pl-8 px-4 py-2.5 rounded-xl border ${errors.username ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87] transition-all duration-200`}
+                                                    className={`w-full pl-8 px-4 py-2.5 rounded-xl border ${errors.username ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0] transition-all duration-200`}
                                                     placeholder="johndoe"
                                                 />
                                             </div>
@@ -274,7 +274,7 @@ const RegisterPage = () => {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className={`w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                                className={`w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                                 placeholder="you@example.com"
                                             />
                                             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -294,7 +294,7 @@ const RegisterPage = () => {
                                                 name="password"
                                                 value={formData.password}
                                                 onChange={handleChange}
-                                                className={`w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                                className={`w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                                 placeholder="Create a strong password"
                                             />
                                             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -314,7 +314,7 @@ const RegisterPage = () => {
                                                 name="confirmPassword"
                                                 value={formData.confirmPassword}
                                                 onChange={handleChange}
-                                                className={`w-full px-4 py-2 rounded-lg border ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#308e87]`}
+                                                className={`w-full px-4 py-2 rounded-lg border ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} bg-white/50 dark:bg-gray-900/50 focus:ring-2 focus:ring-[#6B3FA0]`}
                                                 placeholder="Re-enter your password"
                                             />
                                             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -332,13 +332,13 @@ const RegisterPage = () => {
                                                     name="agreeToTerms"
                                                     checked={formData.agreeToTerms}
                                                     onChange={handleChange}
-                                                    className="h-4 w-4 text-[#308e87] border-gray-300 rounded focus:ring-[#308e87]"
+                                                    className="h-4 w-4 text-[#6B3FA0] border-gray-300 rounded focus:ring-[#6B3FA0]"
                                                 />
                                                 <label className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
                                                     I agree to the{' '}
                                                     <Link
                                                         href="/terms"
-                                                        className="text-[#308e87] hover:text-[#308e87]/80"
+                                                        className="text-[#6B3FA0] hover:text-[#6B3FA0]/80"
                                                         onClick={(e) => {
                                                             e.preventDefault();
                                                             handleNavigation('/terms');
@@ -349,7 +349,7 @@ const RegisterPage = () => {
                                                     {' '}and{' '}
                                                     <Link
                                                         href="/privacy"
-                                                        className="text-[#308e87] hover:text-[#308e87]/80"
+                                                        className="text-[#6B3FA0] hover:text-[#6B3FA0]/80"
                                                         onClick={(e) => {
                                                             e.preventDefault();
                                                             handleNavigation('/privacy');
@@ -371,7 +371,7 @@ const RegisterPage = () => {
                                                 disabled={isLoading}
                                                 className="relative w-full inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
                                             >
-                                                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                                                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                                                 <span className="relative">
                                                     {isLoading ? 'Creating Account...' : 'Create Account'}
                                                 </span>
@@ -391,7 +391,7 @@ const RegisterPage = () => {
                                                         localStorage.setItem('forbes-capital-theme', currentTheme || 'system');
                                                         window.location.href = '/login';
                                                     }}
-                                                    className="text-[#308e87] hover:text-[#308e87]/80 font-medium"
+                                                    className="text-[#6B3FA0] hover:text-[#6B3FA0]/80 font-medium"
                                                 >
                                                     Sign in
                                                 </button>

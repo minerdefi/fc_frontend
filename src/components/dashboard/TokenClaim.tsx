@@ -917,7 +917,7 @@ export default function TokenClaim({ onSuccess }: TokenClaimProps) {
                             <button
                                 onClick={handleClaimToken}
                                 disabled={isLoading || totalGreenTokens <= 0}
-                                className={`px-6 bg-[#308e87] hover:bg-[#266f69] text-white rounded-lg py-2 font-medium transition-colors flex items-center justify-center ${(isLoading || totalGreenTokens <= 0) ? 'opacity-70 cursor-not-allowed' : ''}`}
+                                className={`px-6 bg-[#6B3FA0] hover:bg-[#266f69] text-white rounded-lg py-2 font-medium transition-colors flex items-center justify-center ${(isLoading || totalGreenTokens <= 0) ? 'opacity-70 cursor-not-allowed' : ''}`}
                             >
                                 {isLoading ? (
                                     <FontAwesomeIcon icon={faSpinner} className="animate-spin mr-2" />

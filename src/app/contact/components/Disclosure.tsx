@@ -15,7 +15,7 @@ export default function Disclosure() {
                 Exits include (1) current and former FG Premium portfolio companies which may have been acquired and/or (2) where FG Premium sold tokens and/or equity. Certain portfolio companies on this list may still be held in FG Premium funds.
             </p>
             <p className="mb-2 titillium-web-extralight-italic text-gray-600 dark:text-gray-400">
-                A list of investments made by funds managed by FG Premium is available here: <span className="text-[#308e87] hover:underline cursor-pointer">https://fgpremiumfunds.com/main/portfolio/</span>
+                A list of investments made by funds managed by FG Premium is available here: <span className="text-[#6B3FA0] hover:underline cursor-pointer">https://fgpremiumfunds.com/main/portfolio/</span>
             </p>
             <p className="mb-2 titillium-web-extralight-italic text-gray-600 dark:text-gray-400">
                 Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure.

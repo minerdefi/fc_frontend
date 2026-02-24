@@ -54,7 +54,7 @@ export default function Home() {
                 href="/register"
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
               >
-                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#308e87] via-[#308e87] to-[#308e87] group-hover:bg-gradient-to-br group-hover:from-[#308e87] group-hover:via-[#308e87] group-hover:to-[#308e87] transition-all duration-300"></span>
+                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#F5B31A] group-hover:from-[#F5B31A] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
                 <span className="relative">Get Started</span>
               </Link>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
             className="flex flex-col items-center justify-center text-center mb-16"
           >
             <div className="w-full lg:w-10/12">
-              <span className="text-base font-semibold text-[#308e87] mb-4 block">WHY NOW?</span>
+              <span className="text-base font-semibold text-[#6B3FA0] mb-4 block">WHY NOW?</span>
               <h2 className="text-4xl lg:text-5xl font-bold mt-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 Three Powerful Cultural and Technological Forces are Colliding Simultaneously
               </h2>
@@ -113,7 +113,7 @@ export default function Home() {
                 className="group hover:scale-105 transition-transform duration-300 h-full"
               >
                 <div className="p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
-                  <span className="text-5xl font-bold bg-gradient-to-r from-[#308e87] to-purple-600 bg-clip-text text-transparent mb-6">
+                  <span className="text-5xl font-bold bg-gradient-to-r from-[#6B3FA0] to-purple-600 bg-clip-text text-transparent mb-6">
                     {item.number}
                   </span>
                   <hr className="border-t border-gray-200 dark:border-gray-700 mb-6" />
@@ -153,8 +153,8 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   href="/blog"
                   className="mt-6 inline-flex items-center px-6 py-3 rounded-full 
-                    border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
-                    dark:text-[#308e87] dark:hover:text-white
+                    border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
+                    dark:text-[#6B3FA0] dark:hover:text-white
                     transition-all duration-300 font-semibold group"
                 >
                   Read More
@@ -204,8 +204,8 @@ export default function Home() {
                   whileTap={{ scale: 95 }}
                   href="/blog"
                   className="mt-6 inline-flex items-center px-6 py-3 rounded-full 
-                    border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
-                    dark:text-[#308e87] dark:hover:text-white
+                    border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
+                    dark:text-[#6B3FA0] dark:hover:text-white
                     transition-all duration-300 font-semibold group"
                 >
                   Read More
@@ -254,8 +254,8 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   href="/blog"
                   className="mt-6 inline-flex items-center px-6 py-3 rounded-full 
-                    border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
-                    dark:text-[#308e87] dark:hover:text-white
+                    border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
+                    dark:text-[#6B3FA0] dark:hover:text-white
                     transition-all duration-300 font-semibold group"
                 >
                   Read More
@@ -299,8 +299,8 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 rounded-full 
-                  border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white
-                  dark:text-[#308e87] dark:hover:text-white
+                  border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white
+                  dark:text-[#6B3FA0] dark:hover:text-white
                   transition-all duration-300 font-semibold group"
               >
                 Get in touch

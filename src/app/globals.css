@@ -88,7 +88,7 @@ html {
 
 /* Blog content styles */
 .blog-content a {
-  @apply text-[#308e87] hover:underline;
+  @apply text-[#6B3FA0] hover:underline;
 }
 
 .blog-content ul {
@@ -125,11 +125,11 @@ html {
   }
 
   .prose a {
-    @apply text-[#308e87] hover:text-[#308e87]/80 no-underline hover:underline transition-colors duration-200;
+    @apply text-[#6B3FA0] hover:text-[#6B3FA0]/80 no-underline hover:underline transition-colors duration-200;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-[#308e87] bg-[#308e87]/5 pl-4 py-2 my-6 italic;
+    @apply border-l-4 border-[#6B3FA0] bg-[#6B3FA0]/5 pl-4 py-2 my-6 italic;
   }
 
   .prose code {
@@ -150,7 +150,7 @@ html {
   }
 
   .prose ul li:before {
-    @apply content-[''] block h-2 w-2 rounded-full bg-[#308e87] mt-2 mr-3 flex-shrink-0;
+    @apply content-[''] block h-2 w-2 rounded-full bg-[#6B3FA0] mt-2 mr-3 flex-shrink-0;
   }
 }
 

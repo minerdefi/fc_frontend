@@ -78,10 +78,10 @@ export default function ContactForm() {
         leading-tight 
         focus:outline-none 
         focus:ring-2 
-        focus:ring-[#308e87]/20
-        focus:border-[#308e87]
+        focus:ring-[#6B3FA0]/20
+        focus:border-[#6B3FA0]
         transition-all duration-300
-        hover:border-[#308e87]/70
+        hover:border-[#6B3FA0]/70
         backdrop-blur-sm
     `;
 
@@ -192,7 +192,7 @@ export default function ContactForm() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={isSubmitting}
-                        className={`px-6 py-2 rounded-full border-2 border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white dark:hover:text-white transition-all duration-300 text-sm font-medium w-28 text-center flex items-center justify-center shadow hover:shadow-md ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                        className={`px-6 py-2 rounded-full border-2 border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white dark:hover:text-white transition-all duration-300 text-sm font-medium w-28 text-center flex items-center justify-center shadow hover:shadow-md ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                             }`}
                     >
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />

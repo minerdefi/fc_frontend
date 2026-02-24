@@ -24,7 +24,7 @@ export default function PerformanceChart() {
                             {
                                 label: 'NAV Per Share',
                                 data: initialData.nav,
-                                borderColor: '#308e87',
+                                borderColor: '#6B3FA0',
                                 backgroundColor: 'rgba(48, 142, 135, 0.1)',
                                 tension: 0.4,
                                 fill: true

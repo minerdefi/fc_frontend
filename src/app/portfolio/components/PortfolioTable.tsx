@@ -72,7 +72,7 @@ export default function PortfolioTable() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()}
-                                        className="text-gray-600 hover:text-[#308e87] dark:text-gray-400 dark:hover:text-[#308e87] transition-all duration-300 w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50"
+                                        className="text-gray-600 hover:text-[#6B3FA0] dark:text-gray-400 dark:hover:text-[#6B3FA0] transition-all duration-300 w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50"
                                     >
                                         <i className="fa-brands fa-x-twitter text-xl"></i>
                                     </motion.a>
@@ -84,7 +84,7 @@ export default function PortfolioTable() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={(e) => e.stopPropagation()}
-                                    className="px-6 py-2 rounded-full border border-[#308e87] text-[#308e87] hover:bg-[#308e87] hover:text-white dark:hover:text-white transition-all duration-300 text-sm font-medium w-28 text-center flex items-center justify-center shadow hover:shadow-md"
+                                    className="px-6 py-2 rounded-full border border-[#6B3FA0] text-[#6B3FA0] hover:bg-[#6B3FA0] hover:text-white dark:hover:text-white transition-all duration-300 text-sm font-medium w-28 text-center flex items-center justify-center shadow hover:shadow-md"
                                 >
                                     Visit Website
                                 </motion.a>
@@ -129,7 +129,7 @@ export default function PortfolioTable() {
                         Exits include current and former FG Premium portfolio companies which may have been acquired and/or where FG Premium sold tokens and/or equity. Certain portfolio companies on this list may still be held in FG Premium funds.
                     </p>
                     <p>
-                        A list of investments made by funds managed by FG Premium is available here: <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">https://fgpremiumfunds.com/main/portfolio/</a>
+                        A list of investments made by funds managed by FG Premium is available here: <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#6B3FA0] hover:underline">https://fgpremiumfunds.com/main/portfolio/</a>
                     </p>
                     <p>
                         Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure.

@@ -55,7 +55,7 @@ const PrivacyPage: React.FC = () => {
                                             href="https://www.google.com/policies/privacy/partners/"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-[#308e87] hover:text-[#308e87]/80 transition-colors"
+                                            className="text-[#6B3FA0] hover:text-[#6B3FA0]/80 transition-colors"
                                         >
                                             www.google.com/policies/privacy/partners/
                                         </Link>
@@ -81,7 +81,7 @@ const PrivacyPage: React.FC = () => {
                                     <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
                                         <p className="italic">
                                             If you have any questions about our Privacy Policy, please contact us at:{' '}
-                                            <span className="text-[#308e87]">support@fgpremiumfunds.com</span>
+                                            <span className="text-[#6B3FA0]">support@fgpremiumfunds.com</span>
                                         </p>
                                     </div>
                                 </motion.div>

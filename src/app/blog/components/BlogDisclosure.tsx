@@ -14,7 +14,7 @@ export default function BlogDisclosure() {
                 </p>
                 <p className="titillium-web-extralight-italic">
                     A list of investments made by funds managed by FG Premium is available here: {' '}
-                    <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#308e87] hover:underline">
+                    <a href="https://fgpremiumfunds.com/main/portfolio/" target="_blank" rel="noopener noreferrer" className="text-[#6B3FA0] hover:underline">
                         https://fgpremiumfunds.com/main/portfolio/
                     </a>
                 </p>
