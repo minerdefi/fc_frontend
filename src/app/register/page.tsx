@@ -369,12 +369,9 @@ const RegisterPage = () => {
                                             <button
                                                 type="submit"
                                                 disabled={isLoading}
-                                                className="relative w-full inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
+                                                className="w-full inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full bg-[#6B3FA0] hover:bg-[#6B3FA0]/90 transition-all duration-300"
                                             >
-                                                <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
-                                                <span className="relative">
-                                                    {isLoading ? 'Creating Account...' : 'Create Account'}
-                                                </span>
+                                                {isLoading ? 'Creating Account...' : 'Create Account'}
                                             </button>
 
                                             {apiError && (

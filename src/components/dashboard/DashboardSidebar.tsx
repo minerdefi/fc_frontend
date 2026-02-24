@@ -82,7 +82,7 @@ export default function DashboardSidebar({ isOpen, onClose }: DashboardSidebarPr
                                 width={35}
                                 height={35}
                             />
-                            <span className="ml-3 text-lg font-semibold bg-gradient-to-r from-[#6B3FA0] to-[#F5B31A] bg-clip-text text-transparent">
+                            <span className="ml-3 text-lg font-semibold text-gray-900 dark:text-white">
                                 FG Premium Funds
                             </span>
                         </Link>

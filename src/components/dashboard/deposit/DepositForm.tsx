@@ -136,8 +136,8 @@ export function DepositForm({ selectedCrypto, minimumDeposit }: DepositFormProps
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-4 py-2 bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#277771] 
-                         text-white rounded-md hover:from-[#277771] hover:to-[#1f5d58]
+                    className="w-full px-4 py-2 bg-[#6B3FA0] hover:bg-[#6B3FA0]/90
+                         text-white rounded-md
                          disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center
                          transition-all duration-200 shadow-sm hover:shadow"
                 >

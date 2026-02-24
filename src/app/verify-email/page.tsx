@@ -80,10 +80,9 @@ const VerifyEmailPage: React.FC = () => {
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{message}</h2>
                         <Link
                             href="/login"
-                            className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
+                            className="inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full bg-[#6B3FA0] hover:bg-[#6B3FA0]/90 transition-all duration-300"
                         >
-                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
-                            <span className="relative">Go to Login</span>
+                            Go to Login
                         </Link>
                     </motion.div>
                 )}
@@ -103,10 +102,9 @@ const VerifyEmailPage: React.FC = () => {
                         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">{message}</p>
                         <Link
                             href="/register"
-                            className="relative inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full group"
+                            className="inline-flex items-center justify-center px-8 py-3 font-bold text-white rounded-full bg-[#6B3FA0] hover:bg-[#6B3FA0]/90 transition-all duration-300"
                         >
-                            <span className="absolute w-full h-full rounded-full bg-gradient-to-br from-[#6B3FA0] via-[#6B3FA0] to-[#6B3FA0] group-hover:bg-gradient-to-br group-hover:from-[#6B3FA0] group-hover:via-[#6B3FA0] group-hover:to-[#6B3FA0] transition-all duration-300"></span>
-                            <span className="relative">Back to Registration</span>
+                            Back to Registration
                         </Link>
                     </motion.div>
                 )}
